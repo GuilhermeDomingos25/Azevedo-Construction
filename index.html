@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Azevedo | Construction &amp; Remodeling Services</title>
+  <!-- Google Fonts: Montserrat & Cinzel -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f5df88',
+              400: '#e5c05d',
+              500: '#D4AF37',
+              600: '#C5A059',
+              700: '#aa8232',
+              glow: 'rgba(212, 175, 55, 0.25)'
+            },
+            dark: {
+              950: '#0b0c0e',
+              900: '#121316',
+              850: '#17191e',
+              800: '#1d2027',
+              700: '#252932'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- BEGIN: Custom Luxury Styles -->
+  <style data-purpose="luxury-theme">
+    body {
+      background-color: #121316;
+      font-family: 'Montserrat', sans-serif;
+      color: #e2e8f0;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF3BF 0%, #D4AF37 50%, #AA8232 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.08);
+      transition: all 0.35s ease;
+    }
+
+    .gold-border-glow:hover {
+      border-color: rgba(212, 175, 55, 0.85);
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #E6C265 0%, #D4AF37 50%, #B89228 100%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gold-btn:hover {
+      background: linear-gradient(135deg, #f5d47e 0%, #e2be4a 50%, #cb9f2a 100%);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+      transform: scale(1.02);
+    }
+
+    /* Subtle background grid pattern */
+    .dark-pattern {
+      background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
+    }
+
+    /* Carousel Transition Fade */
+    .hero-slide {
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    /* Floating Action Button (FAB) Luxury Pulse */
+    @keyframes goldPulseGlow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.75), 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 16px rgba(212, 175, 55, 0), 0 12px 30px rgba(212, 175, 55, 0.3);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0), 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .gold-fab-pulse {
+      animation: goldPulseGlow 2.5s infinite;
+    }
+  </style>
+  <!-- END: Custom Luxury Styles -->
+</head>
+
+<body class="bg-dark-900 text-slate-200 antialiased selection:bg-gold-500 selection:text-dark-950">
+  <!-- BEGIN: MainHeader -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-dark-950/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-2.5 sm:gap-4 group min-w-0" href="#">
+        <!-- Golden 3D Logo Icon (logo001.png) -->
+        <div class="relative h-12 sm:h-16 md:h-18 flex items-center justify-center flex-shrink-0">
+          <img alt="Azevedo Construction Logo"
+            class="h-full w-auto object-contain drop-shadow-[0_2px_12px_rgba(212,175,55,0.45)] transition-transform duration-300 group-hover:scale-105"
+            height="120" src="img/logo001.png" width="210">
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span
+            class="font-cinzel text-xl sm:text-3xl tracking-[0.2em] sm:tracking-[0.25em] font-bold text-white group-hover:text-gold-400 transition-colors leading-none truncate">
+            AZEVEDO
+          </span>
+          <span class="hidden sm:block text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-gold-400/90 font-medium mt-1 truncate">
+            Construction &amp; Remodeling Services
+          </span>
+        </div>
+      </a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 lg:space-x-10 text-sm font-medium tracking-wider">
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#sobre" id="navLinkSobre">Sobre nós</a>
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#servicos" id="navLinkServicos">Serviços</a>
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#contato" id="navLinkContato">Contato</a>
+      </nav>
+      <!-- Header Actions (Language Switcher + CTA + Mobile Hamburger Toggle) -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <!-- Language Switcher Pill -->
+        <div class="flex items-center bg-dark-900 border border-gold-500/40 rounded-full p-0.5 shadow-sm" role="group" aria-label="Idioma / Language">
+          <button type="button" id="langBtnPt" aria-label="Mudar para Português (Brasil)"
+            class="lang-btn-pt flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-200 bg-gold-500 text-dark-950 shadow">
+            <span>🇧🇷</span>
+            <span>PT</span>
+          </button>
+          <button type="button" id="langBtnEn" aria-label="Switch to English (US)"
+            class="lang-btn-en flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200">
+            <span>🇺🇸</span>
+            <span>EN</span>
+          </button>
+        </div>
+
+        <button
+          class="gold-btn text-dark-950 font-bold px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm tracking-wider uppercase shadow-lg transition duration-300 hover:scale-105 active:scale-95"
+          id="headerQuoteBtn">
+          <span class="hidden sm:inline" id="headerQuoteText">Solicitar Orçamento</span>
+          <span class="sm:hidden" id="headerQuoteTextShort">Orçamento</span>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuToggleBtn" aria-label="Abrir menu de navegação" aria-expanded="false"
+          class="md:hidden p-2 rounded-lg text-gold-400 hover:text-white hover:bg-gold-500/10 focus:outline-none transition-colors">
+          <svg id="hamburgerIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <svg id="hamburgerIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer / Dropdown -->
+    <div id="mobileNavDrawer" class="md:hidden hidden bg-dark-950/98 border-b border-gold-500/30 backdrop-blur-xl px-6 py-6 transition-all duration-300 shadow-2xl">
+      <!-- Mobile Language Switcher -->
+      <div class="flex items-center justify-center mb-5 pb-4 border-b border-gold-500/20">
+        <span class="text-xs uppercase tracking-widest text-slate-400 mr-3" id="mobileLangLabel">Idioma:</span>
+        <div class="inline-flex items-center bg-dark-900 border border-gold-500/40 rounded-full p-0.5">
+          <button type="button" id="mobileLangBtnPt" class="mobile-lang-btn-pt flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-gold-500 text-dark-950 shadow">
+            <span>🇧🇷</span>
+            <span>Português</span>
+          </button>
+          <button type="button" id="mobileLangBtnEn" class="mobile-lang-btn-en flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200">
+            <span>🇺🇸</span>
+            <span>English</span>
+          </button>
+        </div>
+      </div>
+      <nav class="flex flex-col space-y-4 text-base font-medium tracking-wider text-center">
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#sobre" id="mobileNavLinkSobre">Sobre nós</a>
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#servicos" id="mobileNavLinkServicos">Serviços</a>
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#contato" id="mobileNavLinkContato">Contato</a>
+        <a class="text-gold-400 font-semibold py-2.5 flex items-center justify-center gap-2 hover:text-white transition-colors" href="tel:+5527996889345">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"></path></svg>
+          <span>+55 (27) 99688-9345</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+  <!-- BEGIN: HeroSection -->
+  <section class="relative h-[100svh] min-h-[560px] sm:min-h-[640px] max-h-[900px] w-full overflow-hidden pt-20 sm:pt-24" id="home">
+    <!-- Slides Carousel Wrapper -->
+    <div class="relative w-full h-full" id="carouselSlides">
+      <!-- Slide 1 (High Luxury Kitchen - gabinete_01.jpeg) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 z-0">
+        <img alt="Cozinha de luxo com armários e iluminação refinada" class="w-full h-full object-cover object-center"
+          src="img/gabinete_01.jpeg">
+        <!-- Luxury Dark Vignette Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-950/65 to-dark-950/70"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <!-- Slide 2 (Siding & Luxury Exterior - siding.jpg) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 z-0">
+        <img alt="Instalação de siding e fachadas de alto padrão" class="w-full h-full object-cover object-center"
+          src="img/siding.jpg">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-950/65 to-dark-950/70"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <!-- Slide 3 (Custom Outdoor Deck - deck.jpeg) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 z-10">
+        <img alt="Deck externo de madeira nobre e acabamento premium" class="w-full h-full object-cover object-center"
+          src="img/deck.jpeg">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-950/65 to-dark-950/70"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+    </div>
+    <!-- Navigation Arrows -->
+    <button aria-label="Slide anterior"
+      class="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-dark-950/40 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none flex items-center justify-center text-gold-400 hover:text-white transition duration-200 group"
+      id="prevSlide">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+        stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+    <button aria-label="Próximo slide"
+      class="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-dark-950/40 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none flex items-center justify-center text-gold-400 hover:text-white transition duration-200 group"
+      id="nextSlide">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+        stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+    <!-- Hero Content Overlay (Exact Reference Typography) -->
+    <div
+      class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto pointer-events-none">
+      <h1
+        class="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-extrabold tracking-tight uppercase leading-tight drop-shadow-[0_4px_15px_rgba(0,0,0,0.8)] px-2">
+        <span class="text-gold-400 block mb-1" id="heroLine1">CONSTRUINDO QUALIDADE.</span>
+        <span class="text-white block" id="heroLine2">CRIANDO CONFIANÇA.</span>
+      </h1>
+      <!-- CTA Button -->
+      <div class="mt-6 sm:mt-8 pointer-events-auto">
+        <button
+          class="gold-btn text-dark-950 font-bold px-7 sm:px-10 py-3 sm:py-3.5 rounded-lg text-sm sm:text-lg tracking-wider uppercase shadow-2xl transition duration-300 hover:scale-105 active:scale-95"
+          id="openModalBtn">
+          <span id="heroQuoteText">Solicitar Orçamento</span>
+        </button>
+      </div>
+      <!-- Pagination Dots Indicator -->
+      <div class="absolute bottom-10 flex items-center gap-2.5 pointer-events-auto" id="dotsContainer">
+        <button aria-label="Slide 1"
+          class="carousel-dot w-2.5 h-2.5 rounded-full transition-all duration-300 bg-stone-500/80"
+          data-index="0"></button>
+        <button aria-label="Slide 2"
+          class="carousel-dot w-2.5 h-2.5 rounded-full hover:bg-gold-400 transition-all duration-300 bg-stone-500/80"
+          data-index="1"></button>
+        <button aria-label="Slide 3"
+          class="carousel-dot w-2.5 h-2.5 rounded-full hover:bg-gold-400 transition-all duration-300 bg-gold-400 ring-2 ring-gold-400/50"
+          data-index="2"></button>
+      </div>
+    </div>
+  </section>
+  <!-- END: HeroSection -->
+  <!-- BEGIN: AboutSection -->
+  <section class="py-20 bg-dark-950 border-b border-dark-800 relative" id="sobre">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-block mb-3">
+        <span class="text-xs uppercase tracking-[0.35em] text-gold-400 font-semibold" id="aboutTag">Excelência em Construção</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-cinzel font-bold text-white mb-6" id="aboutHeading">
+        Construindo com Padrão Excepcional
+      </h2>
+      <p class="max-w-3xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-normal" id="aboutDesc">
+        Com anos de atuação primorosa no setor de reformas de interiores e exteriores, a <strong
+          class="text-gold-400 font-semibold">Azevedo Construction</strong> transforma residências e espaços comerciais
+        em ambientes de alto luxo, combinando mão de obra refinada, pontualidade e materiais nobres de altíssima
+        durabilidade.
+      </p>
+    </div>
+  </section>
+  <!-- END: AboutSection -->
+  <!-- BEGIN: ServicesSection -->
+  <section class="py-28 bg-dark-900 dark-pattern relative" id="servicos">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mb-4 tracking-wide" id="servicesHeading">
+          Nossos Serviços
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed" id="servicesSubheading">
+          Nossos serviços combinam precisão artesanal, materiais de primeira linha e soluções sob medida para cada
+          detalhe da sua reforma ou construção.
+        </p>
+        <div class="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+          <span id="servicesBadgeText">Clique na foto para expandir ou no card para ver detalhes</span>
+        </div>
+      </div>
+      <!-- Services Grid (10 Cards com fotos reais e expansão ao clicar) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+        <!-- Card 1: Instalação de Gabinetes -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="gabinetes" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="gabinetes" title="Clique para expandir a foto">
+            <img src="img/gabinete_01.jpeg" alt="Instalação de Gabinetes" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">5 fotos</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="gabinetes">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="44" rx="2" width="44" x="10" y="10"></rect>
+                <line x1="32" x2="32" y1="10" y2="54"></line>
+                <line x1="10" x2="54" y1="18" y2="18"></line>
+                <circle cx="28" cy="34" fill="#D4AF37" r="1.5"></circle>
+                <circle cx="36" cy="34" fill="#D4AF37" r="1.5"></circle>
+                <line x1="16" x2="16" y1="54" y2="60"></line>
+                <line x1="48" x2="48" y1="54" y2="60"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Gabinetes</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Instalação de gabinetes e armários planejados com alinhamento milimétrico e acabamento impecável.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2: Instalação de Janelas -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="janelas" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="janelas" title="Clique para expandir a foto">
+            <img src="img/janelas.jpeg" alt="Instalação de Janelas" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="janelas">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="44" rx="1" width="40" x="12" y="10"></rect>
+                <rect height="36" width="14" x="16" y="14"></rect>
+                <rect height="36" width="14" x="34" y="14"></rect>
+                <line stroke-width="3" x1="8" x2="56" y1="54" y2="54"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Janelas</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Instalação e substituição de janelas modernas com vedação térmica e isolamento acústico superior.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Instalação de Prateleiras -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="prateleiras" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="prateleiras" title="Clique para expandir a foto">
+            <img src="img/prateleira.jpeg" alt="Instalação de Prateleiras" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="prateleiras">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <line stroke-width="3" x1="14" x2="50" y1="26" y2="26"></line>
+                <path d="M30 26 L32 20 L34 26"></path>
+                <circle cx="32" cy="18" r="4"></circle>
+                <line stroke-width="3" x1="10" x2="54" y1="44" y2="44"></line>
+                <line x1="20" x2="20" y1="26" y2="50"></line>
+                <line x1="44" x2="44" y1="26" y2="50"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Prateleiras</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Prateleiras flutuantes decorativas e nichos sob medida com fixação invisível de alta resistência.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4: Instalação de Portas -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="portas" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="portas" title="Clique para expandir a foto">
+            <img src="img/porta.jpeg" alt="Instalação de Portas" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="portas">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="46" width="28" x="18" y="10"></rect>
+                <circle cx="40" cy="34" fill="#D4AF37" r="2"></circle>
+                <line stroke-width="2" x1="14" x2="50" y1="56" y2="56"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Portas</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Portas internas e de entrada, batentes e guarnições com regulagem macia e fechaduras de segurança.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5: Instalação de Cercas -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="cercas" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="cercas" title="Clique para expandir a foto">
+            <img src="img/cerca_01.jpeg" alt="Instalação de Cercas" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">2 fotos</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="cercas">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <path d="M12 24 L16 16 L20 24 V52 H12 Z"></path>
+                <path d="M26 24 L30 16 L34 24 V52 H26 Z"></path>
+                <path d="M40 24 L44 16 L48 24 V52 H40 Z"></path>
+                <line stroke-width="2" x1="8" x2="52" y1="28" y2="28"></line>
+                <line stroke-width="2" x1="8" x2="52" y1="44" y2="44"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Cercas</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Cercas residenciais de madeira tratada, vinil e alumínio com máxima durabilidade contra intempéries.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6: Instalação de Painéis -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="paineis" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="paineis" title="Clique para expandir a foto">
+            <img src="img/painel.jpeg" alt="Instalação de Painéis" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="paineis">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="44" width="40" x="12" y="10"></rect>
+                <line x1="22" x2="22" y1="10" y2="54"></line>
+                <line x1="32" x2="32" y1="10" y2="54"></line>
+                <line x1="42" x2="42" y1="10" y2="54"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Painéis</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Painéis ripados elegantes, revestimento de paredes internas e soluções de isolamento arquitetônico.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7: Instalação de Espelhos -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="espelhos" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="espelhos" title="Clique para expandir a foto">
+            <img src="img/espelho.jpeg" alt="Instalação de Espelhos" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="espelhos">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="44" rx="2" width="32" x="16" y="10"></rect>
+                <rect height="34" width="22" x="21" y="15"></rect>
+                <line x1="24" x2="28" y1="22" y2="18"></line>
+                <line x1="36" x2="40" y1="42" y2="38"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Espelhos</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Espelhos bisotados de grandes formatos, espelhos iluminados em LED e vidros temperados especiais.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8: Instalação de Pisos -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="pisos" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="pisos" title="Clique para expandir a foto">
+            <img src="img/piso_01.jpeg" alt="Instalação de Pisos" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">2 fotos</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="pisos">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <rect height="40" width="40" x="12" y="12"></rect>
+                <path d="M20 22 L32 30 L44 22"></path>
+                <path d="M20 34 L32 42 L44 34"></path>
+                <line x1="32" x2="32" y1="12" y2="52"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Pisos</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Pisos de madeira nobre, vinílicos LVP, porcelanatos retificados e restauração de pisos finos.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 9: Instalação de Decks -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group sm:col-start-1 lg:col-start-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="decks" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="decks" title="Clique para expandir a foto">
+            <img src="img/deck.jpeg" alt="Instalação de Decks" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="decks">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <line stroke-width="2.5" x1="12" x2="52" y1="20" y2="20"></line>
+                <line stroke-width="2.5" x1="12" x2="52" y1="36" y2="36"></line>
+                <line x1="18" x2="18" y1="20" y2="36"></line>
+                <line x1="28" x2="28" y1="20" y2="36"></line>
+                <line x1="36" x2="36" y1="20" y2="36"></line>
+                <line x1="46" x2="46" y1="20" y2="36"></line>
+                <rect height="12" width="44" x="10" y="36"></rect>
+                <line x1="14" x2="14" y1="48" y2="54"></line>
+                <line x1="50" x2="50" y1="48" y2="54"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Decks</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Decks de madeira tratada e materiais compostos de alta resistência, pergolados e áreas gourmet.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Card 10: Instalação de Siding -->
+        <div
+          class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
+          data-service="siding" role="button" tabindex="0">
+          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+            data-service="siding" title="Clique para expandir a foto">
+            <img src="img/siding.jpg" alt="Instalação de Siding" loading="lazy"
+              class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="card-expand-text">Expandir foto</span>
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+                <span class="card-photo-count">1 foto</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="siding">
+            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+                <path d="M10 24 L32 8 L54 24 V54 H10 Z"></path>
+                <line stroke-width="2" x1="10" x2="54" y1="30" y2="30"></line>
+                <line stroke-width="2" x1="10" x2="54" y1="38" y2="38"></line>
+                <line stroke-width="2" x1="10" x2="54" y1="46" y2="46"></line>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 tracking-wide card-title">Instalação de Siding</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
+              Revestimentos externos de alta durabilidade, proteção térmica e acabamento refinado de fachadas.
+            </p>
+            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+              <span class="card-cta-text">Ver fotos e detalhes</span>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ServicesSection -->
+  <!-- BEGIN: MainFooter -->
+  <footer class="bg-dark-950 border-t border-gold-500/20 pt-16 pb-12 relative" id="contato">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-center">
+        <!-- Column 1: Brand Logo Large (Matching reference footer) -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <!-- Golden 3D Logo Icon (logo001.png) -->
+          <div class="relative h-20 sm:h-24 w-auto mb-4 flex items-center justify-center">
+            <img alt="Azevedo Construction Logo"
+              class="h-full w-auto object-contain drop-shadow-[0_4px_20px_rgba(212,175,55,0.4)]" height="120"
+              src="img/logo001.png" width="210">
+          </div>
+          <span class="font-cinzel text-3xl sm:text-4xl font-extrabold tracking-[0.25em] text-white">
+            AZEVEDO
+          </span>
+          <span class="text-xs sm:text-sm uppercase tracking-[0.3em] text-gold-400 mt-1 font-medium">
+            Construction &amp; Remodeling Services
+          </span>
+          <p class="text-slate-500 text-xs mt-4 max-w-xs" id="footerTagline">
+            Compromisso inabalável com a excelência técnica, pontualidade e transparência em todas as obras.
+          </p>
+        </div>
+        <!-- Column 2: Contato (Matching layout & phone callout) -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-2xl font-bold text-white mb-6 tracking-wide" id="footerContactHeading">
+            Contato
+          </h3>
+          <div class="flex flex-col items-center md:items-start gap-3.5 text-gold-400">
+            <!-- Phone Call Button (Same visual styling as Instagram button) -->
+            <a aria-label="Ligue para Azevedo Construction: +55 (27) 99688-9345"
+              class="group flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-gold-400/30 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-200"
+              href="tel:+5527996889345"
+              title="Telefone: +55 (27) 99688-9345">
+              <div
+                class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-dark-950 transition-all duration-200">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z">
+                  </path>
+                </svg>
+              </div>
+              <span class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">+55 (27) 99688-9345</span>
+            </a>
+            <!-- Social Link (Instagram) -->
+            <a aria-label="Instagram da Azevedo Construction: azevedo202645"
+              class="group flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-gold-400/30 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-200"
+              href="https://www.instagram.com/azevedo202645?stkn=b2pibWxnNDU1bW84"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Instagram: @azevedo202645">
+              <div
+                class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-dark-950 transition-all duration-200">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                  </path>
+                </svg>
+              </div>
+              <span class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">azevedo202645</span>
+            </a>
+          </div>
+        </div>
+        <!-- Column 3: Endereço & Stylized Google Maps Preview Card -->
+        <div class="flex flex-col items-center md:items-start w-full">
+          <h3 class="text-2xl font-bold text-white mb-6 tracking-wide" id="footerAddressHeading">
+            Endereço
+          </h3>
+          <!-- Styled Map Card -->
+          <div
+            class="relative w-full max-w-sm h-36 rounded-xl overflow-hidden border border-gold-500/40 shadow-xl bg-dark-900 group">
+            <!-- Simulated Dark Golden Themed Map Vector Graphic -->
+            <svg class="w-full h-full object-cover opacity-60" fill="none" viewBox="0 0 400 200">
+              <!-- Grid street paths -->
+              <rect fill="#1b1d24" height="200" width="400"></rect>
+              <path d="M0,60 Q120,40 200,90 T400,70" fill="none" stroke="#333842" stroke-width="12"></path>
+              <path d="M150,0 L210,200" stroke="#333842" stroke-width="10"></path>
+              <path d="M60,0 L110,200" stroke="#2a2e37" stroke-width="8"></path>
+              <path d="M0,150 L400,120" stroke="#2a2e37" stroke-width="8"></path>
+              <!-- Golden Primary Avenue -->
+              <path d="M0,100 C150,110 250,50 400,100" fill="none" stroke="#D4AF37" stroke-opacity="0.4"
+                stroke-width="4"></path>
+              <circle cx="230" cy="78" fill="#D4AF37" fill-opacity="0.8" r="8"></circle>
+              <circle cx="230" cy="78" r="16" stroke="#D4AF37" stroke-dasharray="3,3" stroke-width="1.5"></circle>
+            </svg>
+            <!-- Map Center Badge -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-2xl font-bold text-stone-200 tracking-wide drop-shadow-md">Maps</span>
+            </div>
+            <!-- Google Watermark -->
+            <div class="absolute bottom-2 left-3 text-[11px] text-stone-400 font-sans tracking-wide">
+              Google
+            </div>
+            <a aria-label="Abrir localização no Google Maps" class="absolute inset-0" href="https://maps.google.com"
+              rel="noopener noreferrer" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Subfooter -->
+      <div class="mt-16 pt-8 border-t border-dark-800 text-center text-xs text-slate-500">
+        <p class="" id="footerCopyrightText">© <span id="year"></span> Azevedo Construction &amp; Remodeling Services. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+  <!-- BEGIN: Floating WhatsApp Button (Acompanha a tela ao subir ou descer) -->
+  <aside aria-label="Contato direto via WhatsApp" class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
+    <a aria-label="Conversar no WhatsApp com Azevedo Construction: +55 (27) 99688-9345"
+      class="gold-btn gold-fab-pulse relative group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full text-dark-950 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer"
+      href="https://wa.me/5527996889345?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!"
+      id="floatingWhatsAppBtn" rel="noopener noreferrer" target="_blank" title="WhatsApp: +55 (27) 99688-9345">
+      <!-- WhatsApp Vector SVG Icon -->
+      <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current transition-transform duration-300 group-hover:scale-110"
+        viewBox="0 0 24 24">
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z">
+        </path>
+      </svg>
+      <!-- Floating Tooltip badge with bilingual preview on hover (desktop only) -->
+      <div
+        class="hidden sm:block absolute right-full mr-3.5 px-3.5 py-2 rounded-xl bg-dark-950/95 border border-gold-500/40 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl backdrop-blur-md">
+        <div class="text-xs font-bold text-gold-400 flex items-center gap-1.5 justify-end">
+          <span>WhatsApp</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        </div>
+        <div class="text-[11px] text-slate-200 font-medium whitespace-nowrap mt-0.5" id="waTooltipMsg">
+          "Olá, gostaria de solicitar um orçamento!"
+        </div>
+      </div>
+    </a>
+  </aside>
+  <!-- END: Floating WhatsApp Button -->
+  <!-- BEGIN: ServiceDetailModal (Detalhes e Foto Real do Serviço) -->
+  <div aria-modal="true"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md opacity-0 pointer-events-none invisible transition-opacity duration-300 p-4"
+    id="serviceDetailModal" role="dialog">
+    <div
+      class="relative bg-dark-900 border border-gold-500/50 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col"
+      id="serviceDetailCard">
+      <!-- Close Button -->
+      <button class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-stone-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all duration-200"
+        id="closeServiceModalBtn" aria-label="Fechar detalhes do serviço">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+
+      <!-- Scrollable Container inside modal -->
+      <div class="overflow-y-auto max-h-[90vh]">
+        <!-- Service Photo Container (Click to expand in fullscreen Lightbox) -->
+        <div class="relative w-full h-52 sm:h-80 bg-dark-950 overflow-hidden flex-shrink-0 group/photo cursor-zoom-in"
+          id="modalPhotoExpandTrigger" title="Clique para expandir a foto em tela cheia">
+          <!-- Real Photo (loads from img/ folder) -->
+          <img id="serviceModalPhoto" src="" alt="Foto do serviço"
+            class="w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover/photo:scale-105 transition-transform duration-500 ease-out">
+          
+          <!-- Gradient Vignette -->
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-black/40 pointer-events-none"></div>
+
+          <!-- Expand Badge on Hover -->
+          <div class="absolute bottom-4 right-4 z-20 pointer-events-none opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300">
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-dark-950/90 text-gold-400 border border-gold-400/60 backdrop-blur-md flex items-center gap-1.5 shadow-xl">
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <span id="serviceModalEnlargeBadge">Ampliar foto</span>
+            </span>
+          </div>
+
+          <!-- Luxury Placeholder if image is pending in img/ -->
+          <div id="servicePhotoFallback"
+            class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-950 to-dark-900 flex flex-col items-center justify-center text-center p-6 border-b border-gold-500/20 hidden">
+            <div id="serviceFallbackIcon" class="w-16 h-16 text-gold-400 mb-3 flex items-center justify-center"></div>
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Azevedo Craftsmanship</span>
+            <p class="text-xs text-slate-400 max-w-sm" id="serviceFallbackText">Foto real em preparação (pasta img/)</p>
+          </div>
+
+          <!-- Category Badge & Photo Counter -->
+          <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-dark-950/90 text-gold-400 border border-gold-500/40 backdrop-blur-md" id="serviceModalGalleryBadge">
+              Galeria do Projeto
+            </span>
+            <span id="servicePhotoCounter" class="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-dark-950/90 text-slate-300 border border-gold-500/30 backdrop-blur-md hidden">
+              1 / 1
+            </span>
+          </div>
+
+          <!-- Modal Gallery Prev / Next Arrows (visible when service has multiple images) -->
+          <button id="modalPrevPhotoBtn" aria-label="Foto anterior"
+            class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-gold-400 hover:text-white hover:bg-gold-500/20 flex items-center justify-center transition-all duration-200 hidden">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </button>
+          <button id="modalNextPhotoBtn" aria-label="Próxima foto"
+            class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-gold-400 hover:text-white hover:bg-gold-500/20 flex items-center justify-center transition-all duration-200 hidden">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </button>
+
+          <!-- Thumbnails / Dots Indicator for multiple photos -->
+          <div id="modalPhotoDots" class="absolute bottom-3 inset-x-0 z-20 flex items-center justify-center gap-1.5"></div>
+        </div>
+
+        <!-- Service Content Body -->
+        <div class="p-6 sm:p-8 flex flex-col gap-5">
+          <div>
+            <h3 id="serviceModalTitle" class="text-2xl sm:text-3xl font-cinzel font-bold text-white tracking-wide">
+              Título do Serviço
+            </h3>
+          </div>
+
+          <p id="serviceModalDesc" class="text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
+            Descrição completa do serviço...
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+            <button id="serviceModalQuoteBtn"
+              class="gold-btn w-full sm:flex-1 text-dark-950 font-bold py-3 px-6 rounded-lg text-xs sm:text-sm uppercase tracking-wider shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
+              </svg>
+              <span id="serviceModalQuoteBtnText">Pedir Orçamento Deste Serviço</span>
+            </button>
+            <a id="serviceModalWhatsAppBtn" href="#" target="_blank" rel="noopener noreferrer"
+              class="w-full sm:w-auto border border-gold-400/60 hover:bg-gold-500/10 text-gold-400 font-semibold py-3 px-5 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"></path>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: ServiceDetailModal -->
+  <!-- BEGIN: ImageLightboxModal (Expansão de Foto em Tela Cheia) -->
+  <div aria-modal="true" role="dialog" id="imageLightboxModal"
+    class="fixed inset-0 z-[70] flex flex-col items-center justify-between bg-black/95 backdrop-blur-xl opacity-0 pointer-events-none invisible transition-all duration-300 select-none">
+    
+    <!-- Top Header Bar -->
+    <header class="w-full flex items-center justify-between px-4 sm:px-8 py-4 bg-gradient-to-b from-black/90 via-black/50 to-transparent z-30">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse shadow-[0_0_10px_#D4AF37]"></span>
+        <div>
+          <h4 id="lightboxServiceTitle" class="text-sm sm:text-base font-cinzel font-bold text-white tracking-wide">
+            Título do Serviço
+          </h4>
+          <p id="lightboxCounter" class="text-xs text-gold-400 font-medium">Foto 1 de 1</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <!-- Close Button -->
+        <button id="closeLightboxBtn" type="button" aria-label="Fechar foto ampliada (ESC)"
+          class="w-10 h-10 rounded-full bg-dark-900/90 border border-gold-500/40 text-stone-300 hover:text-white hover:border-gold-400 hover:bg-gold-500/20 hover:scale-105 flex items-center justify-center transition-all duration-200 shadow-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Center Stage: Prev, Large Image, Next -->
+    <main class="relative w-full flex-1 flex items-center justify-center p-2 sm:p-8 overflow-hidden cursor-zoom-out" id="lightboxImageContainer">
+      <!-- Prev Button -->
+      <button id="lightboxPrevBtn" type="button" aria-label="Foto anterior"
+        class="absolute left-2 sm:left-6 md:left-10 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-dark-950/85 border border-gold-500/50 text-gold-400 hover:text-white hover:bg-gold-500/30 hover:scale-110 flex items-center justify-center transition-all duration-200 shadow-2xl backdrop-blur-md hidden">
+        <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+        </svg>
+      </button>
+
+      <!-- Full-Resolution Expanded Image -->
+      <div class="relative max-w-full max-h-full flex items-center justify-center" id="lightboxImageWrapper">
+        <img id="lightboxImage" src="" alt="Foto expandida em alta resolução"
+          class="max-w-[92vw] max-h-[76vh] sm:max-h-[80vh] md:max-h-[82vh] object-contain rounded-xl shadow-[0_0_60px_rgba(212,175,55,0.22)] border border-gold-500/30 transition-all duration-300 opacity-0 scale-95">
+        
+        <div id="lightboxLoadingSpinner" class="absolute inset-0 flex items-center justify-center pointer-events-none hidden">
+          <div class="w-12 h-12 border-3 border-gold-400 border-t-transparent rounded-full animate-spin shadow-lg"></div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button id="lightboxNextBtn" type="button" aria-label="Próxima foto"
+        class="absolute right-2 sm:right-6 md:right-10 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-dark-950/85 border border-gold-500/50 text-gold-400 hover:text-white hover:bg-gold-500/30 hover:scale-110 flex items-center justify-center transition-all duration-200 shadow-2xl backdrop-blur-md hidden">
+        <svg class="w-5 h-5 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+        </svg>
+      </button>
+    </main>
+
+    <!-- Bottom Footer Bar: Dots & Keyboard navigation info -->
+    <footer class="w-full flex flex-col items-center gap-2.5 px-4 pb-4 sm:pb-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-30">
+      <div id="lightboxDots" class="flex items-center justify-center gap-2"></div>
+      <div class="text-[11px] text-slate-400 bg-dark-950/80 border border-gold-500/20 px-3.5 py-1 rounded-full backdrop-blur-md flex items-center gap-2 text-center">
+        <span class="hidden sm:inline" id="lightboxFooterDesktop">Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> para fechar • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> para navegar</span>
+        <span class="sm:hidden" id="lightboxFooterMobile">Deslize para navegar • Toque para fechar</span>
+      </div>
+    </footer>
+  </div>
+  <!-- END: ImageLightboxModal -->
+  <!-- BEGIN: LeadModal (Solicitar Orçamento) -->
+  <div aria-modal="true"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none invisible transition-opacity duration-300 p-4"
+    id="quoteModal" role="dialog">
+    <div
+      class="relative bg-dark-900 border border-gold-500/50 rounded-2xl w-full max-w-lg p-5 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300"
+      id="modalCard">
+      <!-- Close Button -->
+      <button class="absolute top-4 right-4 text-stone-400 hover:text-white p-2" id="closeModalBtn" aria-label="Fechar modal de orçamento">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-cinzel font-bold text-white mb-2" id="quoteModalTitle">Solicitar Orçamento</h3>
+        <p class="text-xs sm:text-sm text-slate-400" id="quoteModalSub">Preencha seus dados para receber uma consultoria exclusiva e um
+          orçamento personalizado.</p>
+      </div>
+      <form class="space-y-4" id="quoteForm">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteName">Nome Completo</label>
+          <input
+            id="quoteName"
+            class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
+            placeholder="Seu nome completo" required="" type="text">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuotePhone">Telefone</label>
+            <input
+              id="quotePhone"
+              class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
+              placeholder="(27) 99688-9345" required="" type="tel">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteService">Serviço
+              Desejado</label>
+            <select
+              id="quoteService"
+              class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm">
+              <option value="gabinetes">Instalação de Gabinetes</option>
+              <option value="janelas">Instalação de Janelas</option>
+              <option value="prateleiras">Instalação de Prateleiras</option>
+              <option value="portas">Instalação de Portas</option>
+              <option value="cercas">Instalação de Cercas</option>
+              <option value="paineis">Instalação de Painéis</option>
+              <option value="espelhos">Instalação de Espelhos</option>
+              <option value="pisos">Instalação de Pisos</option>
+              <option value="decks">Instalação de Decks</option>
+              <option value="siding">Instalação de Siding</option>
+              <option value="reforma-completa">Reforma Completa</option>
+              <option value="outros">Outros Projetos</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteMessage">Mensagem ou
+            Detalhes</label>
+          <textarea
+            id="quoteMessage"
+            class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
+            placeholder="Descreva brevemente o seu projeto..." rows="3"></textarea>
+        </div>
+        <button class="gold-btn w-full text-dark-950 font-bold py-3 rounded-lg text-sm uppercase tracking-wider mt-2 flex items-center justify-center gap-2 shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-transform"
+          type="submit">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"></path>
+          </svg>
+          <span id="quoteSubmitBtnText">Enviar via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- END: LeadModal -->
+    <!-- BEGIN: Interactive Carousel, Modals and Multilingual Translation Script -->
+  <script data-purpose="multilingual-carousel-and-modals">
+    // Current Year Update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // Multilingual Translation Dictionary (PT-BR / EN-US)
+    // ==========================================
+    const siteTranslations = {
+      pt: {
+        // HTML Lang
+        htmlLang: 'pt-BR',
+
+        // Header & Nav
+        navAbout: 'Sobre nós',
+        navServices: 'Serviços',
+        navContact: 'Contato',
+        quoteBtnHeader: 'Solicitar Orçamento',
+        quoteBtnHeaderShort: 'Orçamento',
+        mobileLangLabel: 'Idioma:',
+        
+        // Hero
+        heroLine1: 'CONSTRUINDO QUALIDADE.',
+        heroLine2: 'CRIANDO CONFIANÇA.',
+        heroQuoteBtn: 'Solicitar Orçamento',
+        
+        // About
+        aboutTag: 'Excelência em Construção',
+        aboutHeading: 'Construindo com Padrão Excepcional',
+        aboutDesc: 'Com anos de atuação primorosa no setor de reformas de interiores e exteriores, a <strong class="text-gold-400 font-semibold">Azevedo Construction</strong> transforma residências e espaços comerciais em ambientes de alto luxo, combinando mão de obra refinada, pontualidade e materiais nobres de altíssima durabilidade.',
+        
+        // Services Section Header
+        servicesHeading: 'Nossos Serviços',
+        servicesSubheading: 'Nossos serviços combinam precisão artesanal, materiais de primeira linha e soluções sob medida para cada detalhe da sua reforma ou construção.',
+        servicesBadgeText: 'Clique na foto para expandir ou no card para ver detalhes',
+        
+        // Cards Common
+        cardExpand: 'Expandir foto',
+        cardCta: 'Ver fotos e detalhes',
+        photoSingular: 'foto',
+        photoPlural: 'fotos',
+        
+        // Footer
+        footerTagline: 'Compromisso inabalável com a excelência técnica, pontualidade e transparência em todas as obras.',
+        footerContactHeading: 'Contato',
+        footerAddressHeading: 'Endereço',
+        footerCopyright: '© {year} Azevedo Construction & Remodeling Services. Todos os direitos reservados.',
+        
+        // Floating WhatsApp
+        waTooltipMsg: '"Olá, gostaria de solicitar um orçamento!"',
+        waBaseUrl: 'https://wa.me/5527996889345?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!',
+        waBtnTitle: 'WhatsApp: +55 (27) 99688-9345',
+        waAriaLabel: 'Conversar no WhatsApp com Azevedo Construction: +55 (27) 99688-9345',
+        
+        // Service Modal
+        serviceModalGalleryBadge: 'Galeria do Projeto',
+        serviceModalEnlargeBadge: 'Ampliar foto',
+        serviceModalQuoteBtn: 'Pedir Orçamento Deste Serviço',
+        serviceModalFallbackText: 'Foto real em preparação (pasta img/)',
+        
+        // Lightbox
+        lightboxPhotoCounter: 'Foto {current} de {total}',
+        lightboxDesktopNav: 'Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> para fechar • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> para navegar',
+        lightboxMobileNav: 'Deslize para navegar • Toque para fechar',
+        
+        // Quote Modal
+        quoteModalTitle: 'Solicitar Orçamento',
+        quoteModalSub: 'Preencha seus dados para receber uma consultoria exclusiva e um orçamento personalizado.',
+        labelQuoteName: 'Nome Completo',
+        placeholderQuoteName: 'Seu nome completo',
+        labelQuotePhone: 'Telefone',
+        placeholderQuotePhone: '(27) 99688-9345',
+        labelQuoteService: 'Serviço Desejado',
+        labelQuoteMessage: 'Mensagem ou Detalhes',
+        placeholderQuoteMessage: 'Descreva brevemente o seu projeto...',
+        quoteSubmitBtnText: 'Enviar via WhatsApp',
+        
+        // Select Options
+        selectReformaCompleta: 'Reforma Completa',
+        selectOutros: 'Outros Projetos',
+        
+        // WhatsApp messages generated dynamically
+        leadMsgHeader: '*NOVO PEDIDO DE ORÇAMENTO*',
+        leadMsgCompany: '*Azevedo Construction & Remodeling*',
+        leadMsgName: '*Nome:*',
+        leadMsgPhone: '*Telefone:*',
+        leadMsgService: '*Serviço:*',
+        leadMsgMessage: '*Mensagem:*',
+        leadMsgClosing: '_Olá, gostaria de solicitar o orçamento para o meu projeto!_',
+        
+        serviceWaMsgHeader: '*SOLICITAÇÃO DE SERVIÇO*',
+        serviceWaMsgInterest: '*Serviço de Interesse:*',
+        serviceWaMsgClosing: '_Olá! Vi o serviço de {service} no site e gostaria de solicitar um orçamento para o meu projeto._'
+      },
+      en: {
+        // HTML Lang
+        htmlLang: 'en',
+
+        // Header & Nav
+        navAbout: 'About Us',
+        navServices: 'Services',
+        navContact: 'Contact',
+        quoteBtnHeader: 'Request a Quote',
+        quoteBtnHeaderShort: 'Quote',
+        mobileLangLabel: 'Language:',
+        
+        // Hero
+        heroLine1: 'BUILDING QUALITY.',
+        heroLine2: 'CREATING TRUST.',
+        heroQuoteBtn: 'Request a Quote',
+        
+        // About
+        aboutTag: 'Excellence in Construction',
+        aboutHeading: 'Building with Exceptional Standards',
+        aboutDesc: 'With years of distinguished experience in interior and exterior remodeling, <strong class="text-gold-400 font-semibold">Azevedo Construction</strong> transforms residences and commercial spaces into high-end luxury environments, combining refined craftsmanship, punctuality, and noble materials of the highest durability.',
+        
+        // Services Section Header
+        servicesHeading: 'Our Services',
+        servicesSubheading: 'Our services combine artisan precision, premium-grade materials, and custom solutions for every detail of your remodeling or construction project.',
+        servicesBadgeText: 'Click photo to enlarge or card to view details',
+        
+        // Cards Common
+        cardExpand: 'Enlarge photo',
+        cardCta: 'View photos & details',
+        photoSingular: 'photo',
+        photoPlural: 'photos',
+        
+        // Footer
+        footerTagline: 'Unwavering commitment to technical excellence, punctuality, and transparency in every project.',
+        footerContactHeading: 'Contact',
+        footerAddressHeading: 'Location',
+        footerCopyright: '© {year} Azevedo Construction & Remodeling Services. All rights reserved.',
+        
+        // Floating WhatsApp
+        waTooltipMsg: '"Hello, I would like to request a quote!"',
+        waBaseUrl: 'https://wa.me/5527996889345?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote!',
+        waBtnTitle: 'WhatsApp: +55 (27) 99688-9345',
+        waAriaLabel: 'Chat on WhatsApp with Azevedo Construction: +55 (27) 99688-9345',
+        
+        // Service Modal
+        serviceModalGalleryBadge: 'Project Gallery',
+        serviceModalEnlargeBadge: 'Enlarge photo',
+        serviceModalQuoteBtn: 'Request a Quote for this Service',
+        serviceModalFallbackText: 'Real photo in preparation (img/ folder)',
+        
+        // Lightbox
+        lightboxPhotoCounter: 'Photo {current} of {total}',
+        lightboxDesktopNav: 'Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> to close • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> to navigate',
+        lightboxMobileNav: 'Swipe to navigate • Tap to close',
+        
+        // Quote Modal
+        quoteModalTitle: 'Request a Quote',
+        quoteModalSub: 'Fill in your details to receive an exclusive consultation and a customized quote.',
+        labelQuoteName: 'Full Name',
+        placeholderQuoteName: 'Your full name',
+        labelQuotePhone: 'Phone Number',
+        placeholderQuotePhone: '+1 (555) 000-0000',
+        labelQuoteService: 'Desired Service',
+        labelQuoteMessage: 'Message or Details',
+        placeholderQuoteMessage: 'Briefly describe your project...',
+        quoteSubmitBtnText: 'Send via WhatsApp',
+        
+        // Select Options
+        selectReformaCompleta: 'Full Remodeling',
+        selectOutros: 'Other Projects',
+        
+        // WhatsApp messages generated dynamically
+        leadMsgHeader: '*NEW QUOTE REQUEST*',
+        leadMsgCompany: '*Azevedo Construction & Remodeling*',
+        leadMsgName: '*Name:*',
+        leadMsgPhone: '*Phone:*',
+        leadMsgService: '*Service:*',
+        leadMsgMessage: '*Message:*',
+        leadMsgClosing: '_Hello, I would like to request a quote for my project!_',
+        
+        serviceWaMsgHeader: '*SERVICE REQUEST*',
+        serviceWaMsgInterest: '*Service of Interest:*',
+        serviceWaMsgClosing: '_Hello! I saw the {service} service on your website and would like to request a quote for my project._'
+      }
+    };
+
+    // ==========================================
+    // Bilingual Services Data
+    // Mapeamento completo com fotos reais da pasta img/
+    // ==========================================
+    const servicesData = {
+      'gabinetes': {
+        title: {
+          pt: 'Instalação de Gabinetes',
+          en: 'Cabinet Installation'
+        },
+        cardDesc: {
+          pt: 'Instalação de gabinetes e armários planejados com alinhamento milimétrico e acabamento impecável.',
+          en: 'Custom cabinets and built-in carpentry installation with millimeter precision and flawless finishing.'
+        },
+        modalDesc: {
+          pt: 'Instalação especializada de gabinetes, armários embutidos e marcenaria de alto padrão para cozinhas, banheiros e closets. Trabalhamos com fixações reforçadas, nivelamento a laser e ferragens de amortecimento suave para máxima elegância e longevidade.',
+          en: 'Expert installation of high-end custom cabinetry, built-in wardrobes, and architectural woodwork for kitchens, bathrooms, and walk-in closets. We use heavy-duty anchorings, precision laser leveling, and soft-close hardware for enduring luxury.'
+        },
+        photoCount: 5,
+        quoteVal: 'gabinetes',
+        images: [
+          'img/gabinete_01.jpeg',
+          'img/gabinete_02.jpeg',
+          'img/gabinete_03.jpeg',
+          'img/gabinete_04.jpeg',
+          'img/gabinete_05.jpeg'
+        ]
+      },
+      'janelas': {
+        title: {
+          pt: 'Instalação de Janelas',
+          en: 'Window Installation'
+        },
+        cardDesc: {
+          pt: 'Instalação e substituição de janelas modernas com vedação térmica e isolamento acústico superior.',
+          en: 'Modern window installation and full replacement with superior thermal sealing and acoustic insulation.'
+        },
+        modalDesc: {
+          pt: 'Instalação e substituição completa de esquadrias e janelas modernas. Nossas soluções oferecem isolamento termoacústico superior, vedação perfeita contra intempéries e economia energética, com acabamentos em madeira nobre, vinil ou alumínio premium.',
+          en: 'Complete window and frame installation and replacement. Our energy-efficient solutions deliver superior thermal and sound insulation, weatherproofing seals, and refined trims in solid wood, vinyl, or premium aluminum.'
+        },
+        photoCount: 1,
+        quoteVal: 'janelas',
+        images: [
+          'img/janelas.jpeg'
+        ]
+      },
+      'prateleiras': {
+        title: {
+          pt: 'Instalação de Prateleiras',
+          en: 'Shelf Installation'
+        },
+        cardDesc: {
+          pt: 'Prateleiras flutuantes decorativas e nichos sob medida com fixação invisível de alta resistência.',
+          en: 'Decorative floating shelves and custom wall niches with heavy-duty hidden structural mounting.'
+        },
+        modalDesc: {
+          pt: 'Desenvolvimento e fixação de prateleiras flutuantes e nichos sob medida com suporte estrutural oculto e capacidade para alta carga. Perfeitas para salas de estar, escritórios, cozinhas gourmet e exibição de peças de design.',
+          en: 'Custom fabrication and installation of floating shelves and recessed niches with hidden structural supports engineered for high load capacity. Perfect for living rooms, executive offices, gourmet kitchens, and display areas.'
+        },
+        photoCount: 1,
+        quoteVal: 'prateleiras',
+        images: [
+          'img/prateleira.jpeg'
+        ]
+      },
+      'portas': {
+        title: {
+          pt: 'Instalação de Portas',
+          en: 'Door Installation'
+        },
+        cardDesc: {
+          pt: 'Portas internas e de entrada, batentes e guarnições com regulagem macia e fechaduras de segurança.',
+          en: 'Interior and exterior doors, frames, and casings with smooth alignment and high-security hardware.'
+        },
+        modalDesc: {
+          pt: 'Instalação precisa de portas internas e externas de madeira maciça ou laqueadas. Cuidamos do prumo exato do batente, fechaduras de alta segurança, dobradiças silenciosas e guarnições perfeitamente alinhadas sem folgas.',
+          en: 'Precision installation of solid wood, lacquered interior, and exterior entry doors. We ensure plumb frame alignment, silent heavy-duty hinges, mortise security locks, and seamless mitered casings.'
+        },
+        photoCount: 1,
+        quoteVal: 'portas',
+        images: [
+          'img/porta.jpeg'
+        ]
+      },
+      'cercas': {
+        title: {
+          pt: 'Instalação de Cercas',
+          en: 'Fence Installation'
+        },
+        cardDesc: {
+          pt: 'Cercas residenciais de madeira tratada, vinil e alumínio com máxima durabilidade contra intempéries.',
+          en: 'Residential treated wood, vinyl, and aluminum fencing built for maximum weather resistance.'
+        },
+        modalDesc: {
+          pt: 'Construção e instalação de cercas residenciais e comerciais em madeira tratada contra intempéries, vinil de alta densidade e alumínio arquitetônico. Alinhamento rigoroso do terreno e fundação sólida para máxima estabilidade.',
+          en: 'Construction and installation of premium residential and perimeter fencing in weather-treated lumber, high-grade vinyl, and architectural aluminum. Deep post foundations and laser-straight alignment.'
+        },
+        photoCount: 2,
+        quoteVal: 'cercas',
+        images: [
+          'img/cerca_01.jpeg',
+          'img/cerca_02.jpeg'
+        ]
+      },
+      'paineis': {
+        title: {
+          pt: 'Instalação de Painéis',
+          en: 'Wall Panel Installation'
+        },
+        cardDesc: {
+          pt: 'Painéis ripados elegantes, revestimento de paredes internas e soluções de isolamento arquitetônico.',
+          en: 'Sleek wood slatted panels, luxury interior wall paneling, and architectural acoustic treatments.'
+        },
+        modalDesc: {
+          pt: 'Revestimento sofisticado de paredes com painéis ripados de madeira nobre, boiseries clássicos, painéis acústicos e forros decorativos com integração para fitas LED embutidas e ocultamento inteligente de fiações.',
+          en: 'Sophisticated architectural wall cladding featuring premium slatted wood, classic boiserie molding, acoustic panels, and decorative feature walls with integrated recessed LED lighting and concealed wiring.'
+        },
+        photoCount: 1,
+        quoteVal: 'paineis',
+        images: [
+          'img/painel.jpeg'
+        ]
+      },
+      'espelhos': {
+        title: {
+          pt: 'Instalação de Espelhos',
+          en: 'Mirror Installation'
+        },
+        cardDesc: {
+          pt: 'Espelhos bisotados de grandes formatos, espelhos iluminados em LED e vidros temperados especiais.',
+          en: 'Large format beveled mirrors, LED backlit vanity mirrors, and specialty tempered glass installation.'
+        },
+        modalDesc: {
+          pt: 'Instalação de espelhos bisotados de grandes dimensões, espelhos lapidados de teto ao chão, espelhos orgânicos e espelhos com retroiluminação LED para banheiros principais, halls de entrada e academias residenciais.',
+          en: 'Expert mounting of oversized beveled mirrors, floor-to-ceiling mirror walls, organic designer mirrors, and LED backlit mirrors for master bathrooms, grand entryways, and home gyms.'
+        },
+        photoCount: 1,
+        quoteVal: 'espelhos',
+        images: [
+          'img/espelho.jpeg'
+        ]
+      },
+      'pisos': {
+        title: {
+          pt: 'Instalação de Pisos',
+          en: 'Flooring Installation'
+        },
+        cardDesc: {
+          pt: 'Pisos de madeira nobre, vinílicos LVP, porcelanatos retificados e restauração de pisos finos.',
+          en: 'Hardwood flooring, luxury vinyl plank (LVP), rectified porcelain tile, and fine floor finishing.'
+        },
+        modalDesc: {
+          pt: 'Instalação profissional de assoalhos de madeira maciça, pisos vinílicos Luxury Vinyl Plank (LVP) 100% à prova d\'água e porcelanatos de grande formato. Nivelamento prévio do contrapiso e acabamentos com rodapés elegantes.',
+          en: 'Professional installation of solid hardwood, 100% waterproof Luxury Vinyl Plank (LVP), and large-format porcelain tile. Subfloor leveling, acoustic underlayment, and tailored baseboards included.'
+        },
+        photoCount: 2,
+        quoteVal: 'pisos',
+        images: [
+          'img/piso_01.jpeg',
+          'img/piso_02.jpeg'
+        ]
+      },
+      'decks': {
+        title: {
+          pt: 'Instalação de Decks',
+          en: 'Deck Installation'
+        },
+        cardDesc: {
+          pt: 'Decks de madeira tratada e materiais compostos de alta resistência, pergolados e áreas gourmet.',
+          en: 'Pressure-treated wood and composite high-performance decks, outdoor pergolas, and patio spaces.'
+        },
+        modalDesc: {
+          pt: 'Construção de decks em madeira nobre (Ipe, Cumaru, Madeira Tratada) e compostos de madeira ecológica de baixa manutenção. Estruturas reforçadas, parafusamento oculto e integração com áreas de piscina, spa e lounges externos.',
+          en: 'Custom construction of hardwood decks (Ipe, Cumaru, Pressure-Treated) and low-maintenance composite decking. Engineered framing, hidden clip fasteners, and seamless outdoor living integration.'
+        },
+        photoCount: 1,
+        quoteVal: 'decks',
+        images: [
+          'img/deck.jpeg'
+        ]
+      },
+      'siding': {
+        title: {
+          pt: 'Instalação de Siding',
+          en: 'Siding Installation'
+        },
+        cardDesc: {
+          pt: 'Revestimentos externos de alta durabilidade, proteção térmica e acabamento refinado de fachadas.',
+          en: 'Durable exterior siding, advanced weatherproofing, and refined architectural facade finishing.'
+        },
+        modalDesc: {
+          pt: 'Revestimentos exteriores de alta performance (vinil, fibro-cimento, madeira tratada e painéis arquitetônicos). Proteção estrutural reforçada contra chuva, sol e umidade com estética elegante e valorização do imóvel.',
+          en: 'High-performance exterior siding (vinyl, fiber cement, engineered wood, and architectural lap siding). Enhanced moisture protection, thermal efficiency, and exterior curb appeal.'
+        },
+        photoCount: 1,
+        quoteVal: 'siding',
+        images: [
+          'img/siding.jpg'
+        ]
+      }
+    };
+
+    // ==========================================
+    // Language Switcher Logic & State
+    // ==========================================
+    let currentLang = localStorage.getItem('azevedo_lang') || 'pt';
+
+    function setLanguage(lang) {
+      if (!siteTranslations[lang]) lang = 'pt';
+      currentLang = lang;
+      const t = siteTranslations[lang];
+
+      // Update HTML lang attribute
+      document.documentElement.lang = t.htmlLang;
+
+      // Header Desktop Navigation
+      const navAbout = document.getElementById('navLinkSobre');
+      const navServices = document.getElementById('navLinkServicos');
+      const navContact = document.getElementById('navLinkContato');
+      if (navAbout) navAbout.textContent = t.navAbout;
+      if (navServices) navServices.textContent = t.navServices;
+      if (navContact) navContact.textContent = t.navContact;
+
+      // Header CTA Buttons
+      const headerQuoteText = document.getElementById('headerQuoteText');
+      const headerQuoteTextShort = document.getElementById('headerQuoteTextShort');
+      if (headerQuoteText) headerQuoteText.textContent = t.quoteBtnHeader;
+      if (headerQuoteTextShort) headerQuoteTextShort.textContent = t.quoteBtnHeaderShort;
+
+      // Mobile Drawer
+      const mobileLangLabel = document.getElementById('mobileLangLabel');
+      const mobileNavAbout = document.getElementById('mobileNavLinkSobre');
+      const mobileNavServices = document.getElementById('mobileNavLinkServicos');
+      const mobileNavContact = document.getElementById('mobileNavLinkContato');
+      if (mobileLangLabel) mobileLangLabel.textContent = t.mobileLangLabel;
+      if (mobileNavAbout) mobileNavAbout.textContent = t.navAbout;
+      if (mobileNavServices) mobileNavServices.textContent = t.navServices;
+      if (mobileNavContact) mobileNavContact.textContent = t.navContact;
+
+      // Hero Section
+      const heroLine1 = document.getElementById('heroLine1');
+      const heroLine2 = document.getElementById('heroLine2');
+      const heroQuoteText = document.getElementById('heroQuoteText');
+      if (heroLine1) heroLine1.textContent = t.heroLine1;
+      if (heroLine2) heroLine2.textContent = t.heroLine2;
+      if (heroQuoteText) heroQuoteText.textContent = t.heroQuoteBtn;
+
+      // About Section
+      const aboutTag = document.getElementById('aboutTag');
+      const aboutHeading = document.getElementById('aboutHeading');
+      const aboutDesc = document.getElementById('aboutDesc');
+      if (aboutTag) aboutTag.textContent = t.aboutTag;
+      if (aboutHeading) aboutHeading.textContent = t.aboutHeading;
+      if (aboutDesc) aboutDesc.innerHTML = t.aboutDesc;
+
+      // Services Section Header
+      const servicesHeading = document.getElementById('servicesHeading');
+      const servicesSubheading = document.getElementById('servicesSubheading');
+      const servicesBadgeText = document.getElementById('servicesBadgeText');
+      if (servicesHeading) servicesHeading.textContent = t.servicesHeading;
+      if (servicesSubheading) servicesSubheading.textContent = t.servicesSubheading;
+      if (servicesBadgeText) servicesBadgeText.textContent = t.servicesBadgeText;
+
+      // Services Cards (All 10 Cards)
+      document.querySelectorAll('.service-card').forEach(card => {
+        const serviceId = card.getAttribute('data-service');
+        const data = servicesData[serviceId];
+        if (!data) return;
+
+        const titleEl = card.querySelector('.card-title');
+        const descEl = card.querySelector('.card-desc');
+        const countEl = card.querySelector('.card-photo-count');
+        const expandEl = card.querySelector('.card-expand-text');
+        const ctaEl = card.querySelector('.card-cta-text');
+        const photoTrigger = card.querySelector('.card-photo-trigger');
+        const imgEl = card.querySelector('img');
+
+        if (titleEl) titleEl.textContent = data.title[lang];
+        if (descEl) descEl.textContent = data.cardDesc[lang];
+        if (countEl) {
+          const suffix = data.photoCount > 1 ? t.photoPlural : t.photoSingular;
+          countEl.textContent = `${data.photoCount} ${suffix}`;
+        }
+        if (expandEl) expandEl.textContent = t.cardExpand;
+        if (ctaEl) ctaEl.textContent = t.cardCta;
+        if (photoTrigger) photoTrigger.setAttribute('title', lang === 'pt' ? 'Clique para expandir a foto' : 'Click to enlarge photo');
+        if (imgEl) imgEl.setAttribute('alt', data.title[lang]);
+      });
+
+      // Footer
+      const footerTagline = document.getElementById('footerTagline');
+      const footerContactHeading = document.getElementById('footerContactHeading');
+      const footerAddressHeading = document.getElementById('footerAddressHeading');
+      const footerCopyrightText = document.getElementById('footerCopyrightText');
+      if (footerTagline) footerTagline.textContent = t.footerTagline;
+      if (footerContactHeading) footerContactHeading.textContent = t.footerContactHeading;
+      if (footerAddressHeading) footerAddressHeading.textContent = t.footerAddressHeading;
+      if (footerCopyrightText) {
+        footerCopyrightText.innerHTML = t.footerCopyright.replace('{year}', new Date().getFullYear());
+      }
+
+      // Floating WhatsApp Button
+      const waTooltipMsg = document.getElementById('waTooltipMsg');
+      const floatingWaBtn = document.getElementById('floatingWhatsAppBtn');
+      if (waTooltipMsg) waTooltipMsg.textContent = t.waTooltipMsg;
+      if (floatingWaBtn) {
+        floatingWaBtn.href = t.waBaseUrl;
+        floatingWaBtn.title = t.waBtnTitle;
+        floatingWaBtn.setAttribute('aria-label', t.waAriaLabel);
+      }
+
+      // Service Detail Modal Labels & Button
+      const modalGalleryBadge = document.getElementById('serviceModalGalleryBadge');
+      const modalEnlargeBadge = document.getElementById('serviceModalEnlargeBadge');
+      const modalQuoteBtnText = document.getElementById('serviceModalQuoteBtnText');
+      const fallbackText = document.getElementById('serviceFallbackText');
+      if (modalGalleryBadge) modalGalleryBadge.textContent = t.serviceModalGalleryBadge;
+      if (modalEnlargeBadge) modalEnlargeBadge.textContent = t.serviceModalEnlargeBadge;
+      if (modalQuoteBtnText) modalQuoteBtnText.textContent = t.serviceModalQuoteBtn;
+      if (fallbackText) fallbackText.textContent = t.serviceModalFallbackText;
+
+      // If Service Detail Modal is currently open, update its title, desc and WA link
+      if (currentOpenedService && servicesData[currentOpenedService]) {
+        const sData = servicesData[currentOpenedService];
+        const sTitleEl = document.getElementById('serviceModalTitle');
+        const sDescEl = document.getElementById('serviceModalDesc');
+        const sWaBtn = document.getElementById('serviceModalWhatsAppBtn');
+        if (sTitleEl) sTitleEl.textContent = sData.title[lang];
+        if (sDescEl) sDescEl.textContent = sData.modalDesc[lang];
+        if (sWaBtn) {
+          const sTitle = sData.title[lang];
+          const waMsg = `${t.serviceWaMsgHeader}
+${t.leadMsgCompany}
+----------------------------------------
+${t.serviceWaMsgInterest} ${sTitle}
+----------------------------------------
+${t.serviceWaMsgClosing.replace('{service}', sTitle)}`;
+          sWaBtn.href = `https://wa.me/5527996889345?text=${encodeURIComponent(waMsg)}`;
+        }
+      }
+
+      // If Lightbox is open, update its title & counter
+      if (currentLightboxService && servicesData[currentLightboxService]) {
+        const lbTitle = document.getElementById('lightboxServiceTitle');
+        const lbCounter = document.getElementById('lightboxCounter');
+        if (lbTitle) lbTitle.textContent = servicesData[currentLightboxService].title[lang];
+        if (lbCounter && lightboxImages.length > 0) {
+          lbCounter.textContent = t.lightboxPhotoCounter
+            .replace('{current}', currentLightboxIdx + 1)
+            .replace('{total}', lightboxImages.length);
+        }
+      }
+      const lbFooterDesktop = document.getElementById('lightboxFooterDesktop');
+      const lbFooterMobile = document.getElementById('lightboxFooterMobile');
+      if (lbFooterDesktop) lbFooterDesktop.innerHTML = t.lightboxDesktopNav;
+      if (lbFooterMobile) lbFooterMobile.textContent = t.lightboxMobileNav;
+
+      // Quote Modal Labels, Placeholders & Options
+      const quoteModalTitle = document.getElementById('quoteModalTitle');
+      const quoteModalSub = document.getElementById('quoteModalSub');
+      const labelQuoteName = document.getElementById('labelQuoteName');
+      const quoteName = document.getElementById('quoteName');
+      const labelQuotePhone = document.getElementById('labelQuotePhone');
+      const quotePhone = document.getElementById('quotePhone');
+      const labelQuoteService = document.getElementById('labelQuoteService');
+      const labelQuoteMessage = document.getElementById('labelQuoteMessage');
+      const quoteMessage = document.getElementById('quoteMessage');
+      const quoteSubmitBtnText = document.getElementById('quoteSubmitBtnText');
+
+      if (quoteModalTitle) quoteModalTitle.textContent = t.quoteModalTitle;
+      if (quoteModalSub) quoteModalSub.textContent = t.quoteModalSub;
+      if (labelQuoteName) labelQuoteName.textContent = t.labelQuoteName;
+      if (quoteName) quoteName.placeholder = t.placeholderQuoteName;
+      if (labelQuotePhone) labelQuotePhone.textContent = t.labelQuotePhone;
+      if (quotePhone) quotePhone.placeholder = t.placeholderQuotePhone;
+      if (labelQuoteService) labelQuoteService.textContent = t.labelQuoteService;
+      if (labelQuoteMessage) labelQuoteMessage.textContent = t.labelQuoteMessage;
+      if (quoteMessage) quoteMessage.placeholder = t.placeholderQuoteMessage;
+      if (quoteSubmitBtnText) quoteSubmitBtnText.textContent = t.quoteSubmitBtnText;
+
+      // Translate Service Options in Quote Modal Select
+      const quoteSelect = document.getElementById('quoteService');
+      if (quoteSelect) {
+        Array.from(quoteSelect.options).forEach(opt => {
+          const val = opt.value;
+          if (servicesData[val]) {
+            opt.textContent = servicesData[val].title[lang];
+          } else if (val === 'reforma-completa') {
+            opt.textContent = t.selectReformaCompleta;
+          } else if (val === 'outros') {
+            opt.textContent = t.selectOutros;
+          }
+        });
+      }
+
+      // Update Switcher Button States (Active vs Inactive)
+      updateSwitcherButtonStyles(lang);
+
+      // Persist selection
+      try {
+        localStorage.setItem('azevedo_lang', lang);
+      } catch (err) {
+        console.warn('Storage not available', err);
+      }
+    }
+
+    function updateSwitcherButtonStyles(lang) {
+      // Desktop Buttons
+      const desktopPt = document.getElementById('langBtnPt');
+      const desktopEn = document.getElementById('langBtnEn');
+      // Mobile Buttons
+      const mobilePt = document.getElementById('mobileLangBtnPt');
+      const mobileEn = document.getElementById('mobileLangBtnEn');
+
+      const activeClasses = ['bg-gold-500', 'text-dark-950', 'shadow', 'font-bold'];
+      const inactiveClasses = ['text-slate-300', 'font-semibold', 'hover:text-white'];
+
+      if (lang === 'pt') {
+        // PT is active
+        desktopPt?.classList.add(...activeClasses);
+        desktopPt?.classList.remove('text-slate-300', 'font-semibold');
+        desktopEn?.classList.remove(...activeClasses);
+        desktopEn?.classList.add(...inactiveClasses);
+
+        mobilePt?.classList.add(...activeClasses);
+        mobilePt?.classList.remove('text-slate-300', 'font-semibold');
+        mobileEn?.classList.remove(...activeClasses);
+        mobileEn?.classList.add(...inactiveClasses);
+      } else {
+        // EN is active
+        desktopEn?.classList.add(...activeClasses);
+        desktopEn?.classList.remove('text-slate-300', 'font-semibold');
+        desktopPt?.classList.remove(...activeClasses);
+        desktopPt?.classList.add(...inactiveClasses);
+
+        mobileEn?.classList.add(...activeClasses);
+        mobileEn?.classList.remove('text-slate-300', 'font-semibold');
+        mobilePt?.classList.remove(...activeClasses);
+        mobilePt?.classList.add(...inactiveClasses);
+      }
+    }
+
+    // Switcher Event Listeners
+    document.getElementById('langBtnPt')?.addEventListener('click', () => setLanguage('pt'));
+    document.getElementById('langBtnEn')?.addEventListener('click', () => setLanguage('en'));
+    document.getElementById('mobileLangBtnPt')?.addEventListener('click', () => setLanguage('pt'));
+    document.getElementById('mobileLangBtnEn')?.addEventListener('click', () => setLanguage('en'));
+
+    // ==========================================
+    // Hero Slider Carousel Logic
+    // ==========================================
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const nextBtn = document.getElementById('nextSlide');
+    const prevBtn = document.getElementById('prevSlide');
+    let currentSlide = 0;
+    let slideInterval = null;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-stone-500/80');
+          dot.classList.add('bg-gold-400', 'ring-2', 'ring-gold-400/50');
+        } else {
+          dot.classList.remove('bg-gold-400', 'ring-2', 'ring-gold-400/50');
+          dot.classList.add('bg-stone-500/80');
+        }
+      });
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    function startAutoSlide() {
+      if (slideInterval) clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      startAutoSlide();
+    }
+
+    nextBtn?.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        resetAutoSlide();
+      });
+    });
+
+    // Touch swipe support for Hero Carousel (Mobile & Tablets)
+    const carouselContainer = document.getElementById('carouselSlides');
+    let heroTouchStartX = 0;
+    let heroTouchEndX = 0;
+
+    carouselContainer?.addEventListener('touchstart', (e) => {
+      heroTouchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselContainer?.addEventListener('touchend', (e) => {
+      heroTouchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = heroTouchEndX - heroTouchStartX;
+      if (Math.abs(swipeDistance) > 40) {
+        if (swipeDistance < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        resetAutoSlide();
+      }
+    }, { passive: true });
+
+    // ==========================================
+    // Mobile Drawer Navigation Logic
+    // ==========================================
+    const mobileMenuToggleBtn = document.getElementById('mobileMenuToggleBtn');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const hamburgerIconOpen = document.getElementById('hamburgerIconOpen');
+    const hamburgerIconClose = document.getElementById('hamburgerIconClose');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+      if (isMobileMenuOpen) {
+        mobileNavDrawer?.classList.remove('hidden');
+        hamburgerIconOpen?.classList.add('hidden');
+        hamburgerIconClose?.classList.remove('hidden');
+        mobileMenuToggleBtn?.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileNavDrawer?.classList.add('hidden');
+        hamburgerIconOpen?.classList.remove('hidden');
+        hamburgerIconClose?.classList.add('hidden');
+        mobileMenuToggleBtn?.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function closeMobileMenu() {
+      if (isMobileMenuOpen) {
+        isMobileMenuOpen = false;
+        mobileNavDrawer?.classList.add('hidden');
+        hamburgerIconOpen?.classList.remove('hidden');
+        hamburgerIconClose?.classList.add('hidden');
+        mobileMenuToggleBtn?.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    mobileMenuToggleBtn?.addEventListener('click', toggleMobileMenu);
+
+    document.querySelectorAll('.mobile-nav-item').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // ==========================================
+    // Quote Request Lead Modal Logic
+    // ==========================================
+    const quoteModal = document.getElementById('quoteModal');
+    const modalCard = document.getElementById('modalCard');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const headerQuoteBtn = document.getElementById('headerQuoteBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const quoteForm = document.getElementById('quoteForm');
+
+    function openModal() {
+      quoteModal?.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+      modalCard?.classList.remove('scale-95');
+      modalCard?.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      quoteModal?.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+      modalCard?.classList.remove('scale-100');
+      modalCard?.classList.add('scale-95');
+      document.body.style.overflow = '';
+    }
+
+    openModalBtn?.addEventListener('click', openModal);
+    headerQuoteBtn?.addEventListener('click', openModal);
+    closeModalBtn?.addEventListener('click', closeModal);
+
+    quoteModal?.addEventListener('click', (e) => {
+      if (e.target === quoteModal) closeModal();
+    });
+
+    // Quote Form Submission -> Dynamic Multilingual WhatsApp Message
+    quoteForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('quoteName')?.value.trim() || '';
+      const phone = document.getElementById('quotePhone')?.value.trim() || '';
+      const serviceSelect = document.getElementById('quoteService');
+      const service = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : '';
+      const details = document.getElementById('quoteMessage')?.value.trim() || '';
+      const t = siteTranslations[currentLang];
+
+      let msg = `${t.leadMsgHeader}
+`;
+      msg += `${t.leadMsgCompany}
+`;
+      msg += `----------------------------------------
+`;
+      msg += `${t.leadMsgName} ${name}
+`;
+      msg += `${t.leadMsgPhone} ${phone}
+`;
+      msg += `${t.leadMsgService} ${service}
+`;
+      if (details) {
+        msg += `${t.leadMsgMessage} ${details}
+`;
+      }
+      msg += `----------------------------------------
+`;
+      msg += `${t.leadMsgClosing}`;
+
+      const whatsappUrl = `https://wa.me/5527996889345?text=${encodeURIComponent(msg)}`;
+      window.open(whatsappUrl, '_blank');
+
+      closeModal();
+      quoteForm.reset();
+    });
+
+    // ==========================================
+    // Service Details Modal Logic & Gallery
+    // ==========================================
+    const serviceDetailModal = document.getElementById('serviceDetailModal');
+    const serviceDetailCard = document.getElementById('serviceDetailCard');
+    const closeServiceModalBtn = document.getElementById('closeServiceModalBtn');
+    let currentOpenedService = null;
+    let currentServiceImages = [];
+    let currentPhotoIndex = 0;
+
+    function renderModalPhoto(index) {
+      if (!currentServiceImages || currentServiceImages.length === 0) return;
+      currentPhotoIndex = (index + currentServiceImages.length) % currentServiceImages.length;
+
+      const photo = document.getElementById('serviceModalPhoto');
+      const counter = document.getElementById('servicePhotoCounter');
+      const dotsContainer = document.getElementById('modalPhotoDots');
+      const targetSrc = currentServiceImages[currentPhotoIndex];
+
+      photo.classList.add('opacity-0');
+
+      const preloader = new Image();
+      preloader.src = targetSrc;
+      preloader.onload = () => {
+        photo.src = targetSrc;
+        photo.classList.remove('opacity-0');
+      };
+      preloader.onerror = () => {
+        photo.src = targetSrc;
+        photo.classList.remove('opacity-0');
+      };
+
+      if (currentServiceImages.length > 1) {
+        if (counter) {
+          counter.classList.remove('hidden');
+          counter.textContent = `${currentPhotoIndex + 1} / ${currentServiceImages.length}`;
+        }
+        if (dotsContainer) {
+          dotsContainer.innerHTML = currentServiceImages.map((_, i) => `
+            <button type="button" aria-label="Foto ${i + 1}" class="h-2 rounded-full transition-all duration-300 ${i === currentPhotoIndex ? 'w-6 bg-gold-400' : 'w-2 bg-white/40 hover:bg-white/70'}" data-dot-idx="${i}"></button>
+          `).join('');
+
+          dotsContainer.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const idx = parseInt(btn.getAttribute('data-dot-idx'), 10);
+              renderModalPhoto(idx);
+            });
+          });
+        }
+      } else {
+        if (counter) counter.classList.add('hidden');
+        if (dotsContainer) dotsContainer.innerHTML = '';
+      }
+    }
+
+    function setupServiceGallery(images, serviceId) {
+      currentServiceImages = (images && images.length > 0) ? images : [];
+      currentPhotoIndex = 0;
+
+      const prevBtn = document.getElementById('modalPrevPhotoBtn');
+      const nextBtn = document.getElementById('modalNextPhotoBtn');
+      const counter = document.getElementById('servicePhotoCounter');
+      const fallback = document.getElementById('servicePhotoFallback');
+      const photo = document.getElementById('serviceModalPhoto');
+      const dotsContainer = document.getElementById('modalPhotoDots');
+
+      if (!currentServiceImages.length) {
+        photo.classList.add('opacity-0');
+        fallback?.classList.remove('hidden');
+        prevBtn?.classList.add('hidden');
+        nextBtn?.classList.add('hidden');
+        counter?.classList.add('hidden');
+        if (dotsContainer) dotsContainer.innerHTML = '';
+        return;
+      }
+
+      fallback?.classList.add('hidden');
+
+      if (currentServiceImages.length > 1) {
+        prevBtn?.classList.remove('hidden');
+        nextBtn?.classList.remove('hidden');
+      } else {
+        prevBtn?.classList.add('hidden');
+        nextBtn?.classList.add('hidden');
+      }
+
+      renderModalPhoto(0);
+    }
+
+    function openServiceModal(serviceId) {
+      const data = servicesData[serviceId];
+      if (!data) return;
+      currentOpenedService = serviceId;
+      const t = siteTranslations[currentLang];
+      const serviceTitle = data.title[currentLang];
+
+      document.getElementById('serviceModalTitle').textContent = serviceTitle;
+      document.getElementById('serviceModalDesc').textContent = data.modalDesc[currentLang];
+
+      // Carrega fotos reais da pasta img/
+      setupServiceGallery(data.images, serviceId);
+
+      // WhatsApp Button inside Service Modal (Bilingual)
+      const waBtn = document.getElementById('serviceModalWhatsAppBtn');
+      const waMsg = `${t.serviceWaMsgHeader}
+${t.leadMsgCompany}
+----------------------------------------
+${t.serviceWaMsgInterest} ${serviceTitle}
+----------------------------------------
+${t.serviceWaMsgClosing.replace('{service}', serviceTitle)}`;
+      if (waBtn) waBtn.href = `https://wa.me/5527996889345?text=${encodeURIComponent(waMsg)}`;
+
+      // Show modal
+      serviceDetailModal?.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+      serviceDetailCard?.classList.remove('scale-95');
+      serviceDetailCard?.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal() {
+      serviceDetailModal?.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+      serviceDetailCard?.classList.remove('scale-100');
+      serviceDetailCard?.classList.add('scale-95');
+      // Restaura scroll se Lightbox não estiver ativa
+      if (imageLightboxModal?.classList.contains('invisible') || imageLightboxModal?.classList.contains('opacity-0')) {
+        document.body.style.overflow = '';
+      }
+    }
+
+    closeServiceModalBtn?.addEventListener('click', closeServiceModal);
+    serviceDetailModal?.addEventListener('click', (e) => {
+      if (e.target === serviceDetailModal) closeServiceModal();
+    });
+
+    document.getElementById('modalPrevPhotoBtn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderModalPhoto(currentPhotoIndex - 1);
+    });
+
+    document.getElementById('modalNextPhotoBtn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderModalPhoto(currentPhotoIndex + 1);
+    });
+
+    // "Pedir Orçamento Deste Serviço" button opens Quote Modal with pre-selected service
+    const serviceModalQuoteBtn = document.getElementById('serviceModalQuoteBtn');
+    serviceModalQuoteBtn?.addEventListener('click', () => {
+      const serviceVal = servicesData[currentOpenedService]?.quoteVal;
+      closeServiceModal();
+      setTimeout(() => {
+        openModal();
+        if (serviceVal) {
+          const select = document.getElementById('quoteService');
+          if (select) select.value = serviceVal;
+        }
+      }, 200);
+    });
+
+    // ==========================================
+    // Lightbox Modal Controls & Gestures
+    // ==========================================
+    const imageLightboxModal = document.getElementById('imageLightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxServiceTitle = document.getElementById('lightboxServiceTitle');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
+    const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+    const lightboxDots = document.getElementById('lightboxDots');
+    const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+    const lightboxSpinner = document.getElementById('lightboxLoadingSpinner');
+
+    let currentLightboxService = null;
+    let lightboxImages = [];
+    let currentLightboxIdx = 0;
+    let lightboxOpenedFromServiceModal = false;
+
+    function openLightbox(serviceId, startIndex = 0) {
+      const data = servicesData[serviceId];
+      if (!data || !data.images || data.images.length === 0) return;
+
+      lightboxOpenedFromServiceModal = !serviceDetailModal?.classList.contains('invisible') && !serviceDetailModal?.classList.contains('opacity-0');
+
+      currentLightboxService = serviceId;
+      lightboxImages = data.images;
+      currentLightboxIdx = (startIndex >= 0 && startIndex < lightboxImages.length) ? startIndex : 0;
+
+      if (lightboxServiceTitle) lightboxServiceTitle.textContent = data.title[currentLang];
+
+      imageLightboxModal?.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+      document.body.style.overflow = 'hidden';
+
+      renderLightboxPhoto(currentLightboxIdx);
+    }
+
+    function renderLightboxPhoto(index) {
+      if (!lightboxImages || lightboxImages.length === 0) return;
+      currentLightboxIdx = (index + lightboxImages.length) % lightboxImages.length;
+      const targetSrc = lightboxImages[currentLightboxIdx];
+      const t = siteTranslations[currentLang];
+
+      lightboxImage?.classList.add('opacity-0', 'scale-95');
+      lightboxImage?.classList.remove('scale-100');
+      if (lightboxSpinner) lightboxSpinner.classList.remove('hidden');
+
+      const preloader = new Image();
+      preloader.src = targetSrc;
+      preloader.onload = () => {
+        if (lightboxImage) lightboxImage.src = targetSrc;
+        if (lightboxSpinner) lightboxSpinner.classList.add('hidden');
+        lightboxImage?.classList.remove('opacity-0', 'scale-95');
+        lightboxImage?.classList.add('scale-100');
+      };
+      preloader.onerror = () => {
+        if (lightboxImage) lightboxImage.src = targetSrc;
+        if (lightboxSpinner) lightboxSpinner.classList.add('hidden');
+        lightboxImage?.classList.remove('opacity-0');
+      };
+
+      if (lightboxImages.length > 1) {
+        if (lightboxCounter) {
+          lightboxCounter.textContent = t.lightboxPhotoCounter
+            .replace('{current}', currentLightboxIdx + 1)
+            .replace('{total}', lightboxImages.length);
+          lightboxCounter.classList.remove('hidden');
+        }
+        lightboxPrevBtn?.classList.remove('hidden');
+        lightboxNextBtn?.classList.remove('hidden');
+
+        if (lightboxDots) {
+          lightboxDots.innerHTML = lightboxImages.map((_, i) => `
+            <button type="button" aria-label="Ir para foto ${i + 1}"
+              class="h-2.5 rounded-full transition-all duration-300 ${i === currentLightboxIdx ? 'w-8 bg-gold-400 shadow-md shadow-gold-500/40' : 'w-2.5 bg-white/40 hover:bg-white/80'}"
+              data-lb-dot="${i}"></button>
+          `).join('');
+
+          lightboxDots.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const idx = parseInt(btn.getAttribute('data-lb-dot'), 10);
+              renderLightboxPhoto(idx);
+            });
+          });
+        }
+      } else {
+        if (lightboxCounter) {
+          lightboxCounter.textContent = t.lightboxPhotoCounter.replace('{current}', 1).replace('{total}', 1);
+        }
+        lightboxPrevBtn?.classList.add('hidden');
+        lightboxNextBtn?.classList.add('hidden');
+        if (lightboxDots) lightboxDots.innerHTML = '';
+      }
+    }
+
+    function closeLightbox() {
+      imageLightboxModal?.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+      lightboxImage?.classList.add('opacity-0', 'scale-95');
+      lightboxImage?.classList.remove('scale-100');
+
+      if (!lightboxOpenedFromServiceModal || serviceDetailModal?.classList.contains('invisible') || serviceDetailModal?.classList.contains('opacity-0')) {
+        document.body.style.overflow = '';
+      }
+      lightboxOpenedFromServiceModal = false;
+    }
+
+    closeLightboxBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeLightbox();
+    });
+
+    lightboxPrevBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderLightboxPhoto(currentLightboxIdx - 1);
+    });
+    lightboxNextBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderLightboxPhoto(currentLightboxIdx + 1);
+    });
+
+    imageLightboxModal?.addEventListener('click', (e) => {
+      if (e.target === imageLightboxModal || e.target.id === 'lightboxImageContainer') {
+        closeLightbox();
+      }
+    });
+
+    // Touch swipe support for Lightbox
+    let lbTouchStartX = 0;
+    let lbTouchEndX = 0;
+
+    imageLightboxModal?.addEventListener('touchstart', (e) => {
+      lbTouchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    imageLightboxModal?.addEventListener('touchend', (e) => {
+      lbTouchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = lbTouchEndX - lbTouchStartX;
+      if (Math.abs(swipeDistance) > 45 && lightboxImages.length > 1) {
+        if (swipeDistance < 0) {
+          renderLightboxPhoto(currentLightboxIdx + 1);
+        } else {
+          renderLightboxPhoto(currentLightboxIdx - 1);
+        }
+      }
+    }, { passive: true });
+
+    // ==========================================
+    // Triggers for Cards & Modal Expansion
+    // ==========================================
+    document.querySelectorAll('.card-photo-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        const serviceId = trigger.getAttribute('data-service');
+        if (serviceId) openLightbox(serviceId, 0);
+      });
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          const serviceId = trigger.getAttribute('data-service');
+          if (serviceId) openLightbox(serviceId, 0);
+        }
+      });
+    });
+
+    document.getElementById('modalPhotoExpandTrigger')?.addEventListener('click', (e) => {
+      if (e.target.closest('#modalPrevPhotoBtn') || e.target.closest('#modalNextPhotoBtn') || e.target.closest('#modalPhotoDots')) {
+        return;
+      }
+      if (currentOpenedService) {
+        openLightbox(currentOpenedService, currentPhotoIndex);
+      }
+    });
+
+    document.querySelectorAll('.service-card').forEach(card => {
+      const serviceId = card.getAttribute('data-service');
+      if (serviceId) {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('.card-photo-trigger')) return;
+          openServiceModal(serviceId);
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            if (e.target.closest('.card-photo-trigger')) return;
+            e.preventDefault();
+            openServiceModal(serviceId);
+          }
+        });
+      }
+    });
+
+    // Keyboard Shortcuts (ESC to close modals, Arrow keys for photos)
+    document.addEventListener('keydown', (e) => {
+      const isLightboxOpen = !imageLightboxModal?.classList.contains('invisible') && !imageLightboxModal?.classList.contains('opacity-0');
+      const isServiceModalOpen = !serviceDetailModal?.classList.contains('invisible') && !serviceDetailModal?.classList.contains('opacity-0');
+      const isQuoteModalOpen = !quoteModal?.classList.contains('invisible') && !quoteModal?.classList.contains('opacity-0');
+
+      if (e.key === 'Escape') {
+        if (isLightboxOpen) {
+          closeLightbox();
+        } else if (isServiceModalOpen) {
+          closeServiceModal();
+        } else if (isQuoteModalOpen) {
+          closeModal();
+        }
+      } else if (isLightboxOpen) {
+        if (e.key === 'ArrowLeft') {
+          renderLightboxPhoto(currentLightboxIdx - 1);
+        } else if (e.key === 'ArrowRight') {
+          renderLightboxPhoto(currentLightboxIdx + 1);
+        }
+      } else if (isServiceModalOpen) {
+        if (e.key === 'ArrowLeft') {
+          renderModalPhoto(currentPhotoIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          renderModalPhoto(currentPhotoIndex + 1);
+        }
+      }
+    });
+
+    // ==========================================
+    // Initialization
+    // ==========================================
+    startAutoSlide();
+    setLanguage(currentLang);
+  </script>
+  <!-- END: Interactive Carousel, Modals and Multilingual Translation Script -->
+</body>
+
+</html>
