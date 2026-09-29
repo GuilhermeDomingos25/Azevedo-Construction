@@ -115,35 +115,40 @@
   <!-- BEGIN: MainHeader -->
   <header
     class="fixed top-0 left-0 w-full z-50 bg-dark-950/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-2">
       <!-- Brand Logo -->
-      <a class="flex items-center gap-2.5 sm:gap-4 group min-w-0" href="#">
+      <a class="flex items-center gap-2 sm:gap-3.5 group flex-shrink-0" href="#">
         <!-- Golden 3D Logo Icon (logo001.png) -->
-        <div class="relative h-12 sm:h-16 md:h-18 flex items-center justify-center flex-shrink-0">
+        <div class="relative h-10 sm:h-14 md:h-16 flex items-center justify-center flex-shrink-0">
           <img alt="Azevedo Construction Logo"
             class="h-full w-auto object-contain drop-shadow-[0_2px_12px_rgba(212,175,55,0.45)] transition-transform duration-300 group-hover:scale-105"
             height="120" src="img/logo001.png" width="210">
         </div>
-        <div class="flex flex-col min-w-0">
+        <div class="flex flex-col flex-shrink-0">
           <span
-            class="font-cinzel text-xl sm:text-3xl tracking-[0.2em] sm:tracking-[0.25em] font-bold text-white group-hover:text-gold-400 transition-colors leading-none truncate">
+            class="font-cinzel text-lg sm:text-2xl md:text-3xl tracking-[0.16em] sm:tracking-[0.25em] font-bold text-white group-hover:text-gold-400 transition-colors leading-none whitespace-nowrap">
             AZEVEDO
           </span>
-          <span class="hidden sm:block text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-gold-400/90 font-medium mt-1 truncate">
+          <span
+            class="hidden sm:block text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.35em] text-gold-400/90 font-medium mt-1 truncate">
             Construction &amp; Remodeling Services
           </span>
         </div>
       </a>
       <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex items-center space-x-8 lg:space-x-10 text-sm font-medium tracking-wider">
-        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#sobre" id="navLinkSobre">Sobre nós</a>
-        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#servicos" id="navLinkServicos">Serviços</a>
-        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#contato" id="navLinkContato">Contato</a>
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#sobre"
+          id="navLinkSobre">Sobre nós</a>
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#servicos"
+          id="navLinkServicos">Serviços</a>
+        <a class="text-slate-300 hover:text-gold-400 transition-colors duration-200" href="#contato"
+          id="navLinkContato">Contato</a>
       </nav>
-      <!-- Header Actions (Language Switcher + CTA + Mobile Hamburger Toggle) -->
+      <!-- Header Actions (Language Switcher on Desktop + CTA + Mobile Hamburger Toggle) -->
       <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-        <!-- Language Switcher Pill -->
-        <div class="flex items-center bg-dark-900 border border-gold-500/40 rounded-full p-0.5 shadow-sm" role="group" aria-label="Idioma / Language">
+        <!-- Language Switcher Pill: visível no desktop (no mobile fica no menu lateral para não ocultar a marca) -->
+        <div class="hidden md:flex items-center bg-dark-900 border border-gold-500/40 rounded-full p-0.5 shadow-sm"
+          role="group" aria-label="Idioma / Language">
           <button type="button" id="langBtnPt" aria-label="Mudar para Português (Brasil)"
             class="lang-btn-pt flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-200 bg-gold-500 text-dark-950 shadow">
             <span>🇧🇷</span>
@@ -157,7 +162,7 @@
         </div>
 
         <button
-          class="gold-btn text-dark-950 font-bold px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm tracking-wider uppercase shadow-lg transition duration-300 hover:scale-105 active:scale-95"
+          class="gold-btn text-dark-950 font-bold px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm tracking-wider uppercase shadow-lg transition duration-300 hover:scale-105 active:scale-95 flex-shrink-0"
           id="headerQuoteBtn">
           <span class="hidden sm:inline" id="headerQuoteText">Solicitar Orçamento</span>
           <span class="sm:hidden" id="headerQuoteTextShort">Orçamento</span>
@@ -175,35 +180,58 @@
       </div>
     </div>
     <!-- Mobile Navigation Drawer / Dropdown -->
-    <div id="mobileNavDrawer" class="md:hidden hidden bg-dark-950/98 border-b border-gold-500/30 backdrop-blur-xl px-6 py-6 transition-all duration-300 shadow-2xl">
+    <div id="mobileNavDrawer"
+      class="md:hidden hidden bg-dark-950/98 border-b border-gold-500/30 backdrop-blur-xl px-6 py-6 transition-all duration-300 shadow-2xl">
       <!-- Mobile Language Switcher -->
       <div class="flex items-center justify-center mb-5 pb-4 border-b border-gold-500/20">
         <span class="text-xs uppercase tracking-widest text-slate-400 mr-3" id="mobileLangLabel">Idioma:</span>
         <div class="inline-flex items-center bg-dark-900 border border-gold-500/40 rounded-full p-0.5">
-          <button type="button" id="mobileLangBtnPt" class="mobile-lang-btn-pt flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-gold-500 text-dark-950 shadow">
+          <button type="button" id="mobileLangBtnPt"
+            class="mobile-lang-btn-pt flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-200 bg-gold-500 text-dark-950 shadow">
             <span>🇧🇷</span>
             <span>Português</span>
           </button>
-          <button type="button" id="mobileLangBtnEn" class="mobile-lang-btn-en flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200">
+          <button type="button" id="mobileLangBtnEn"
+            class="mobile-lang-btn-en flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-slate-300 hover:text-white transition-all duration-200">
             <span>🇺🇸</span>
             <span>English</span>
           </button>
         </div>
       </div>
       <nav class="flex flex-col space-y-4 text-base font-medium tracking-wider text-center">
-        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#sobre" id="mobileNavLinkSobre">Sobre nós</a>
-        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#servicos" id="mobileNavLinkServicos">Serviços</a>
-        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors" href="#contato" id="mobileNavLinkContato">Contato</a>
-        <a class="text-gold-400 font-semibold py-2.5 flex items-center justify-center gap-2 hover:text-white transition-colors" href="tel:+5527996889345">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"></path></svg>
-          <span>+55 (27) 99688-9345</span>
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors"
+          href="#sobre" id="mobileNavLinkSobre">Sobre nós</a>
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors"
+          href="#servicos" id="mobileNavLinkServicos">Serviços</a>
+        <a class="mobile-nav-item text-slate-200 hover:text-gold-400 py-2 border-b border-gold-500/10 transition-colors"
+          href="#contato" id="mobileNavLinkContato">Contato</a>
+        <!-- Botão de Orçamento no Menu Mobile -->
+        <button id="mobileDrawerQuoteBtn"
+          class="gold-btn w-full text-dark-950 font-bold py-3 px-6 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-xl flex items-center justify-center gap-2 mt-2 hover:scale-[1.01] active:scale-[0.99] transition-transform">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z">
+            </path>
+          </svg>
+          <span id="mobileDrawerQuoteText">Solicitar Orçamento</span>
+        </button>
+        <a class="text-gold-400 font-semibold py-2.5 flex items-center justify-center gap-2 hover:text-white transition-colors"
+          href="tel:+18572514096">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z">
+            </path>
+          </svg>
+          <span>+1 (857) 251-4096</span>
         </a>
       </nav>
     </div>
   </header>
   <!-- END: MainHeader -->
   <!-- BEGIN: HeroSection -->
-  <section class="relative h-[100svh] min-h-[560px] sm:min-h-[640px] max-h-[900px] w-full overflow-hidden pt-20 sm:pt-24" id="home">
+  <section
+    class="relative h-[100svh] min-h-[560px] sm:min-h-[640px] max-h-[900px] w-full overflow-hidden pt-20 sm:pt-24"
+    id="home">
     <!-- Slides Carousel Wrapper -->
     <div class="relative w-full h-full" id="carouselSlides">
       <!-- Slide 1 (High Luxury Kitchen - gabinete_01.jpeg) -->
@@ -233,16 +261,16 @@
     <button aria-label="Slide anterior"
       class="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-dark-950/40 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none flex items-center justify-center text-gold-400 hover:text-white transition duration-200 group"
       id="prevSlide">
-      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
-        stroke-width="1.8" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:-translate-x-1 transition-transform" fill="none"
+        stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
         <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </button>
     <button aria-label="Próximo slide"
       class="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-dark-950/40 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none flex items-center justify-center text-gold-400 hover:text-white transition duration-200 group"
       id="nextSlide">
-      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-        stroke-width="1.8" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:translate-x-1 transition-transform" fill="none"
+        stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </button>
@@ -281,7 +309,8 @@
   <section class="py-20 bg-dark-950 border-b border-dark-800 relative" id="sobre">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="inline-block mb-3">
-        <span class="text-xs uppercase tracking-[0.35em] text-gold-400 font-semibold" id="aboutTag">Excelência em Construção</span>
+        <span class="text-xs uppercase tracking-[0.35em] text-gold-400 font-semibold" id="aboutTag">Excelência em
+          Construção</span>
       </div>
       <h2 class="text-3xl md:text-4xl font-cinzel font-bold text-white mb-6" id="aboutHeading">
         Construindo com Padrão Excepcional
@@ -307,8 +336,14 @@
           Nossos serviços combinam precisão artesanal, materiais de primeira linha e soluções sob medida para cada
           detalhe da sua reforma ou construção.
         </p>
-        <div class="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium">
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+        <div
+          class="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+            <path fill-rule="evenodd"
+              d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+              clip-rule="evenodd"></path>
+          </svg>
           <span id="servicesBadgeText">Clique na foto para expandir ou no card para ver detalhes</span>
         </div>
       </div>
@@ -318,27 +353,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="gabinetes" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="gabinetes" title="Clique para expandir a foto">
             <img src="img/gabinete_01.jpeg" alt="Instalação de Gabinetes" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">5 fotos</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="gabinetes">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="gabinetes">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="44" rx="2" width="44" x="10" y="10"></rect>
                 <line x1="32" x2="32" y1="10" y2="54"></line>
                 <line x1="10" x2="54" y1="18" y2="18"></line>
@@ -352,9 +400,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Instalação de gabinetes e armários planejados com alinhamento milimétrico e acabamento impecável.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -362,27 +414,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="janelas" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="janelas" title="Clique para expandir a foto">
             <img src="img/janelas.jpeg" alt="Instalação de Janelas" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="janelas">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="janelas">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="44" rx="1" width="40" x="12" y="10"></rect>
                 <rect height="36" width="14" x="16" y="14"></rect>
                 <rect height="36" width="14" x="34" y="14"></rect>
@@ -393,9 +458,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Instalação e substituição de janelas modernas com vedação térmica e isolamento acústico superior.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -403,27 +472,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="prateleiras" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="prateleiras" title="Clique para expandir a foto">
             <img src="img/prateleira.jpeg" alt="Instalação de Prateleiras" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="prateleiras">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="prateleiras">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <line stroke-width="3" x1="14" x2="50" y1="26" y2="26"></line>
                 <path d="M30 26 L32 20 L34 26"></path>
                 <circle cx="32" cy="18" r="4"></circle>
@@ -436,9 +518,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Prateleiras flutuantes decorativas e nichos sob medida com fixação invisível de alta resistência.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -446,27 +532,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="portas" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="portas" title="Clique para expandir a foto">
             <img src="img/porta.jpeg" alt="Instalação de Portas" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="portas">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="portas">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="46" width="28" x="18" y="10"></rect>
                 <circle cx="40" cy="34" fill="#D4AF37" r="2"></circle>
                 <line stroke-width="2" x1="14" x2="50" y1="56" y2="56"></line>
@@ -476,9 +575,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Portas internas e de entrada, batentes e guarnições com regulagem macia e fechaduras de segurança.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -486,27 +589,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="cercas" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="cercas" title="Clique para expandir a foto">
             <img src="img/cerca_01.jpeg" alt="Instalação de Cercas" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">2 fotos</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="cercas">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="cercas">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <path d="M12 24 L16 16 L20 24 V52 H12 Z"></path>
                 <path d="M26 24 L30 16 L34 24 V52 H26 Z"></path>
                 <path d="M40 24 L44 16 L48 24 V52 H40 Z"></path>
@@ -518,9 +634,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Cercas residenciais de madeira tratada, vinil e alumínio com máxima durabilidade contra intempéries.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -528,27 +648,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="paineis" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="paineis" title="Clique para expandir a foto">
             <img src="img/painel.jpeg" alt="Instalação de Painéis" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="paineis">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="paineis">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="44" width="40" x="12" y="10"></rect>
                 <line x1="22" x2="22" y1="10" y2="54"></line>
                 <line x1="32" x2="32" y1="10" y2="54"></line>
@@ -559,9 +692,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Painéis ripados elegantes, revestimento de paredes internas e soluções de isolamento arquitetônico.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -569,27 +706,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="espelhos" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="espelhos" title="Clique para expandir a foto">
             <img src="img/espelho.jpeg" alt="Instalação de Espelhos" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="espelhos">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="espelhos">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="44" rx="2" width="32" x="16" y="10"></rect>
                 <rect height="34" width="22" x="21" y="15"></rect>
                 <line x1="24" x2="28" y1="22" y2="18"></line>
@@ -600,9 +750,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Espelhos bisotados de grandes formatos, espelhos iluminados em LED e vidros temperados especiais.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -610,27 +764,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="pisos" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="pisos" title="Clique para expandir a foto">
             <img src="img/piso_01.jpeg" alt="Instalação de Pisos" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">2 fotos</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="pisos">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="pisos">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <rect height="40" width="40" x="12" y="12"></rect>
                 <path d="M20 22 L32 30 L44 22"></path>
                 <path d="M20 34 L32 42 L44 34"></path>
@@ -641,9 +808,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Pisos de madeira nobre, vinílicos LVP, porcelanatos retificados e restauração de pisos finos.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -651,27 +822,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group sm:col-start-1 lg:col-start-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="decks" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="decks" title="Clique para expandir a foto">
             <img src="img/deck.jpeg" alt="Instalação de Decks" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="decks">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="decks">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <line stroke-width="2.5" x1="12" x2="52" y1="20" y2="20"></line>
                 <line stroke-width="2.5" x1="12" x2="52" y1="36" y2="36"></line>
                 <line x1="18" x2="18" y1="20" y2="36"></line>
@@ -687,9 +871,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Decks de madeira tratada e materiais compostos de alta resistência, pergolados e áreas gourmet.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -697,27 +885,40 @@
         <div
           class="gold-border-glow rounded-xl bg-dark-850/90 overflow-hidden flex flex-col group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] service-card"
           data-service="siding" role="button" tabindex="0">
-          <div class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
+          <div
+            class="relative w-full h-44 sm:h-48 bg-dark-950 overflow-hidden cursor-pointer card-photo-trigger group/img"
             data-service="siding" title="Clique para expandir a foto">
             <img src="img/siding.jpg" alt="Instalação de Siding" loading="lazy"
               class="w-full h-full object-cover object-center group-hover/img:scale-110 transition-transform duration-500 ease-out">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-850 via-dark-950/20 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-              <span class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
-                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span
+                class="px-3 py-1.5 rounded-full bg-dark-950/90 border border-gold-400 text-gold-400 shadow-xl transform scale-90 group-hover/img:scale-100 transition-transform flex items-center gap-1.5 text-xs font-semibold backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
                 <span class="card-expand-text">Expandir foto</span>
               </span>
             </div>
             <div class="absolute top-3 right-3 z-10">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
-                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path></svg>
+              <span
+                class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dark-950/85 text-gold-400 border border-gold-500/40 backdrop-blur-md flex items-center gap-1">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z">
+                  </path>
+                </svg>
                 <span class="card-photo-count">1 foto</span>
               </span>
             </div>
           </div>
-          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger" data-service="siding">
-            <div class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
-              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 64 64">
+          <div class="p-6 flex flex-col flex-1 text-center items-center cursor-pointer card-details-trigger"
+            data-service="siding">
+            <div
+              class="w-12 h-12 -mt-11 mb-3 rounded-full bg-dark-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shadow-xl z-10 group-hover:border-gold-400 group-hover:scale-110 transition-all">
+              <svg class="w-6 h-6 stroke-gold-400" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 64 64">
                 <path d="M10 24 L32 8 L54 24 V54 H10 Z"></path>
                 <line stroke-width="2" x1="10" x2="54" y1="30" y2="30"></line>
                 <line stroke-width="2" x1="10" x2="54" y1="38" y2="38"></line>
@@ -728,9 +929,13 @@
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4 card-desc">
               Revestimentos externos de alta durabilidade, proteção térmica e acabamento refinado de fachadas.
             </p>
-            <div class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+            <div
+              class="mt-auto pt-3 border-t border-gold-500/10 w-full flex items-center justify-center gap-1.5 text-xs text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
               <span class="card-cta-text">Ver fotos e detalhes</span>
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
           </div>
         </div>
@@ -767,10 +972,9 @@
           </h3>
           <div class="flex flex-col items-center md:items-start gap-3.5 text-gold-400">
             <!-- Phone Call Button (Same visual styling as Instagram button) -->
-            <a aria-label="Ligue para Azevedo Construction: +55 (27) 99688-9345"
+            <a aria-label="Ligue para Azevedo Construction: +1 (857) 251-4096"
               class="group flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-gold-400/30 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-200"
-              href="tel:+5527996889345"
-              title="Telefone: +55 (27) 99688-9345">
+              href="tel:+18572514096" title="Telefone: +1 (857) 251-4096">
               <div
                 class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-dark-950 transition-all duration-200">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -779,15 +983,15 @@
                   </path>
                 </svg>
               </div>
-              <span class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">+55 (27) 99688-9345</span>
+              <span
+                class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">+1
+                (857) 251-4096</span>
             </a>
             <!-- Social Link (Instagram) -->
             <a aria-label="Instagram da Azevedo Construction: azevedo202645"
               class="group flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-gold-400/30 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-200"
-              href="https://www.instagram.com/azevedo202645?stkn=b2pibWxnNDU1bW84"
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Instagram: @azevedo202645">
+              href="https://www.instagram.com/azevedo202645?stkn=b2pibWxnNDU1bW84" rel="noopener noreferrer"
+              target="_blank" title="Instagram: @azevedo202645">
               <div
                 class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center group-hover:bg-gold-500 group-hover:text-dark-950 transition-all duration-200">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -796,7 +1000,8 @@
                   </path>
                 </svg>
               </div>
-              <span class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">azevedo202645</span>
+              <span
+                class="text-sm sm:text-base font-semibold text-slate-200 group-hover:text-gold-400 transition-colors">azevedo202645</span>
             </a>
           </div>
         </div>
@@ -837,17 +1042,18 @@
       </div>
       <!-- Copyright Subfooter -->
       <div class="mt-16 pt-8 border-t border-dark-800 text-center text-xs text-slate-500">
-        <p class="" id="footerCopyrightText">© <span id="year"></span> Azevedo Construction &amp; Remodeling Services. Todos os direitos reservados.</p>
+        <p class="" id="footerCopyrightText">© <span id="year"></span> Azevedo Construction &amp; Remodeling Services.
+          Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
   <!-- END: MainFooter -->
   <!-- BEGIN: Floating WhatsApp Button (Acompanha a tela ao subir ou descer) -->
   <aside aria-label="Contato direto via WhatsApp" class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
-    <a aria-label="Conversar no WhatsApp com Azevedo Construction: +55 (27) 99688-9345"
+    <a aria-label="Conversar no WhatsApp com Azevedo Construction: +1 (857) 251-4096"
       class="gold-btn gold-fab-pulse relative group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full text-dark-950 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer"
-      href="https://wa.me/5527996889345?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!"
-      id="floatingWhatsAppBtn" rel="noopener noreferrer" target="_blank" title="WhatsApp: +55 (27) 99688-9345">
+      href="https://wa.me/18572514096?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!"
+      id="floatingWhatsAppBtn" rel="noopener noreferrer" target="_blank" title="WhatsApp: +1 (857) 251-4096">
       <!-- WhatsApp Vector SVG Icon -->
       <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current transition-transform duration-300 group-hover:scale-110"
         viewBox="0 0 24 24">
@@ -877,7 +1083,8 @@
       class="relative bg-dark-900 border border-gold-500/50 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col"
       id="serviceDetailCard">
       <!-- Close Button -->
-      <button class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-stone-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all duration-200"
+      <button
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-stone-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all duration-200"
         id="closeServiceModalBtn" aria-label="Fechar detalhes do serviço">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -892,14 +1099,19 @@
           <!-- Real Photo (loads from img/ folder) -->
           <img id="serviceModalPhoto" src="" alt="Foto do serviço"
             class="w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover/photo:scale-105 transition-transform duration-500 ease-out">
-          
+
           <!-- Gradient Vignette -->
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-black/40 pointer-events-none"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-black/40 pointer-events-none">
+          </div>
 
           <!-- Expand Badge on Hover -->
-          <div class="absolute bottom-4 right-4 z-20 pointer-events-none opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300">
-            <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-dark-950/90 text-gold-400 border border-gold-400/60 backdrop-blur-md flex items-center gap-1.5 shadow-xl">
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div
+            class="absolute bottom-4 right-4 z-20 pointer-events-none opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300">
+            <span
+              class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-dark-950/90 text-gold-400 border border-gold-400/60 backdrop-blur-md flex items-center gap-1.5 shadow-xl">
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
               <span id="serviceModalEnlargeBadge">Ampliar foto</span>
             </span>
           </div>
@@ -908,16 +1120,20 @@
           <div id="servicePhotoFallback"
             class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-950 to-dark-900 flex flex-col items-center justify-center text-center p-6 border-b border-gold-500/20 hidden">
             <div id="serviceFallbackIcon" class="w-16 h-16 text-gold-400 mb-3 flex items-center justify-center"></div>
-            <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Azevedo Craftsmanship</span>
+            <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold mb-1">Azevedo
+              Craftsmanship</span>
             <p class="text-xs text-slate-400 max-w-sm" id="serviceFallbackText">Foto real em preparação (pasta img/)</p>
           </div>
 
           <!-- Category Badge & Photo Counter -->
           <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-dark-950/90 text-gold-400 border border-gold-500/40 backdrop-blur-md" id="serviceModalGalleryBadge">
+            <span
+              class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-dark-950/90 text-gold-400 border border-gold-500/40 backdrop-blur-md"
+              id="serviceModalGalleryBadge">
               Galeria do Projeto
             </span>
-            <span id="servicePhotoCounter" class="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-dark-950/90 text-slate-300 border border-gold-500/30 backdrop-blur-md hidden">
+            <span id="servicePhotoCounter"
+              class="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-dark-950/90 text-slate-300 border border-gold-500/30 backdrop-blur-md hidden">
               1 / 1
             </span>
           </div>
@@ -925,15 +1141,20 @@
           <!-- Modal Gallery Prev / Next Arrows (visible when service has multiple images) -->
           <button id="modalPrevPhotoBtn" aria-label="Foto anterior"
             class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-gold-400 hover:text-white hover:bg-gold-500/20 flex items-center justify-center transition-all duration-200 hidden">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
           </button>
           <button id="modalNextPhotoBtn" aria-label="Próxima foto"
             class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-dark-950/80 border border-gold-500/40 text-gold-400 hover:text-white hover:bg-gold-500/20 flex items-center justify-center transition-all duration-200 hidden">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
           </button>
 
           <!-- Thumbnails / Dots Indicator for multiple photos -->
-          <div id="modalPhotoDots" class="absolute bottom-3 inset-x-0 z-20 flex items-center justify-center gap-1.5"></div>
+          <div id="modalPhotoDots" class="absolute bottom-3 inset-x-0 z-20 flex items-center justify-center gap-1.5">
+          </div>
         </div>
 
         <!-- Service Content Body -->
@@ -953,14 +1174,18 @@
             <button id="serviceModalQuoteBtn"
               class="gold-btn w-full sm:flex-1 text-dark-950 font-bold py-3 px-6 rounded-lg text-xs sm:text-sm uppercase tracking-wider shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z">
+                </path>
               </svg>
               <span id="serviceModalQuoteBtnText">Pedir Orçamento Deste Serviço</span>
             </button>
             <a id="serviceModalWhatsAppBtn" href="#" target="_blank" rel="noopener noreferrer"
               class="w-full sm:w-auto border border-gold-400/60 hover:bg-gold-500/10 text-gold-400 font-semibold py-3 px-5 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"></path>
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z">
+                </path>
               </svg>
               <span>WhatsApp</span>
             </a>
@@ -973,9 +1198,10 @@
   <!-- BEGIN: ImageLightboxModal (Expansão de Foto em Tela Cheia) -->
   <div aria-modal="true" role="dialog" id="imageLightboxModal"
     class="fixed inset-0 z-[70] flex flex-col items-center justify-between bg-black/95 backdrop-blur-xl opacity-0 pointer-events-none invisible transition-all duration-300 select-none">
-    
+
     <!-- Top Header Bar -->
-    <header class="w-full flex items-center justify-between px-4 sm:px-8 py-4 bg-gradient-to-b from-black/90 via-black/50 to-transparent z-30">
+    <header
+      class="w-full flex items-center justify-between px-4 sm:px-8 py-4 bg-gradient-to-b from-black/90 via-black/50 to-transparent z-30">
       <div class="flex items-center gap-3">
         <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse shadow-[0_0_10px_#D4AF37]"></span>
         <div>
@@ -985,7 +1211,7 @@
           <p id="lightboxCounter" class="text-xs text-gold-400 font-medium">Foto 1 de 1</p>
         </div>
       </div>
-      
+
       <div class="flex items-center gap-3">
         <!-- Close Button -->
         <button id="closeLightboxBtn" type="button" aria-label="Fechar foto ampliada (ESC)"
@@ -998,7 +1224,8 @@
     </header>
 
     <!-- Center Stage: Prev, Large Image, Next -->
-    <main class="relative w-full flex-1 flex items-center justify-center p-2 sm:p-8 overflow-hidden cursor-zoom-out" id="lightboxImageContainer">
+    <main class="relative w-full flex-1 flex items-center justify-center p-2 sm:p-8 overflow-hidden cursor-zoom-out"
+      id="lightboxImageContainer">
       <!-- Prev Button -->
       <button id="lightboxPrevBtn" type="button" aria-label="Foto anterior"
         class="absolute left-2 sm:left-6 md:left-10 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-dark-950/85 border border-gold-500/50 text-gold-400 hover:text-white hover:bg-gold-500/30 hover:scale-110 flex items-center justify-center transition-all duration-200 shadow-2xl backdrop-blur-md hidden">
@@ -1011,9 +1238,11 @@
       <div class="relative max-w-full max-h-full flex items-center justify-center" id="lightboxImageWrapper">
         <img id="lightboxImage" src="" alt="Foto expandida em alta resolução"
           class="max-w-[92vw] max-h-[76vh] sm:max-h-[80vh] md:max-h-[82vh] object-contain rounded-xl shadow-[0_0_60px_rgba(212,175,55,0.22)] border border-gold-500/30 transition-all duration-300 opacity-0 scale-95">
-        
-        <div id="lightboxLoadingSpinner" class="absolute inset-0 flex items-center justify-center pointer-events-none hidden">
-          <div class="w-12 h-12 border-3 border-gold-400 border-t-transparent rounded-full animate-spin shadow-lg"></div>
+
+        <div id="lightboxLoadingSpinner"
+          class="absolute inset-0 flex items-center justify-center pointer-events-none hidden">
+          <div class="w-12 h-12 border-3 border-gold-400 border-t-transparent rounded-full animate-spin shadow-lg">
+          </div>
         </div>
       </div>
 
@@ -1027,10 +1256,18 @@
     </main>
 
     <!-- Bottom Footer Bar: Dots & Keyboard navigation info -->
-    <footer class="w-full flex flex-col items-center gap-2.5 px-4 pb-4 sm:pb-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-30">
+    <footer
+      class="w-full flex flex-col items-center gap-2.5 px-4 pb-4 sm:pb-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-30">
       <div id="lightboxDots" class="flex items-center justify-center gap-2"></div>
-      <div class="text-[11px] text-slate-400 bg-dark-950/80 border border-gold-500/20 px-3.5 py-1 rounded-full backdrop-blur-md flex items-center gap-2 text-center">
-        <span class="hidden sm:inline" id="lightboxFooterDesktop">Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> para fechar • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> para navegar</span>
+      <div
+        class="text-[11px] text-slate-400 bg-dark-950/80 border border-gold-500/20 px-3.5 py-1 rounded-full backdrop-blur-md flex items-center gap-2 text-center">
+        <span class="hidden sm:inline" id="lightboxFooterDesktop">Use <kbd
+            class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd>
+          para fechar • <kbd
+            class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd>
+          <kbd
+            class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd>
+          para navegar</span>
         <span class="sm:hidden" id="lightboxFooterMobile">Deslize para navegar • Toque para fechar</span>
       </div>
     </footer>
@@ -1044,37 +1281,39 @@
       class="relative bg-dark-900 border border-gold-500/50 rounded-2xl w-full max-w-lg p-5 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300"
       id="modalCard">
       <!-- Close Button -->
-      <button class="absolute top-4 right-4 text-stone-400 hover:text-white p-2" id="closeModalBtn" aria-label="Fechar modal de orçamento">
+      <button class="absolute top-4 right-4 text-stone-400 hover:text-white p-2" id="closeModalBtn"
+        aria-label="Fechar modal de orçamento">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
         </svg>
       </button>
       <div class="text-center mb-6">
         <h3 class="text-2xl font-cinzel font-bold text-white mb-2" id="quoteModalTitle">Solicitar Orçamento</h3>
-        <p class="text-xs sm:text-sm text-slate-400" id="quoteModalSub">Preencha seus dados para receber uma consultoria exclusiva e um
+        <p class="text-xs sm:text-sm text-slate-400" id="quoteModalSub">Preencha seus dados para receber uma consultoria
+          exclusiva e um
           orçamento personalizado.</p>
       </div>
       <form class="space-y-4" id="quoteForm">
         <div>
-          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteName">Nome Completo</label>
-          <input
-            id="quoteName"
+          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1"
+            id="labelQuoteName">Nome Completo</label>
+          <input id="quoteName"
             class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
             placeholder="Seu nome completo" required="" type="text">
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuotePhone">Telefone</label>
-            <input
-              id="quotePhone"
+            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1"
+              id="labelQuotePhone">Telefone</label>
+            <input id="quotePhone"
               class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
-              placeholder="(27) 99688-9345" required="" type="tel">
+              placeholder="+1 (857) 251-4096" required="" type="tel">
           </div>
           <div>
-            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteService">Serviço
+            <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1"
+              id="labelQuoteService">Serviço
               Desejado</label>
-            <select
-              id="quoteService"
+            <select id="quoteService"
               class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm">
               <option value="gabinetes">Instalação de Gabinetes</option>
               <option value="janelas">Instalação de Janelas</option>
@@ -1092,17 +1331,20 @@
           </div>
         </div>
         <div>
-          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1" id="labelQuoteMessage">Mensagem ou
+          <label class="block text-xs uppercase tracking-wider text-gold-400 font-semibold mb-1"
+            id="labelQuoteMessage">Mensagem ou
             Detalhes</label>
-          <textarea
-            id="quoteMessage"
+          <textarea id="quoteMessage"
             class="w-full bg-dark-950 border border-stone-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm"
             placeholder="Descreva brevemente o seu projeto..." rows="3"></textarea>
         </div>
-        <button class="gold-btn w-full text-dark-950 font-bold py-3 rounded-lg text-sm uppercase tracking-wider mt-2 flex items-center justify-center gap-2 shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-transform"
+        <button
+          class="gold-btn w-full text-dark-950 font-bold py-3 rounded-lg text-sm uppercase tracking-wider mt-2 flex items-center justify-center gap-2 shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-transform"
           type="submit">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"></path>
+            <path
+              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.761.884 2.791.884h.001c3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.77-5.769-5.77zm3.366 8.163c-.141.397-.714.73-1.02.775-.29.043-.666.079-1.921-.441-1.605-.664-2.639-2.316-2.719-2.423-.08-.107-.648-.863-.648-1.646 0-.783.407-1.168.552-1.327.145-.159.317-.199.423-.199.106 0 .212.001.305.006.098.005.228-.037.357.273.132.318.45 1.101.49 1.18.04.08.067.172.013.279-.053.106-.08.172-.159.265-.08.093-.167.207-.238.278-.08.08-.163.167-.07.327.093.159.412.679.883 1.098.607.54 1.118.708 1.277.787.159.08.252.066.345-.04.093-.106.397-.463.503-.622.106-.159.212-.133.357-.08.145.053.927.437 1.086.517.159.08.265.119.305.185.04.066.04.384-.101.781zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.66 1.438 5.176L2 22l4.981-1.393A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182c-1.61 0-3.118-.49-4.377-1.332l-.314-.21-2.955.826.839-2.88-.23-.336A8.14 8.14 0 013.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z">
+            </path>
           </svg>
           <span id="quoteSubmitBtnText">Enviar via WhatsApp</span>
         </button>
@@ -1110,7 +1352,7 @@
     </div>
   </div>
   <!-- END: LeadModal -->
-    <!-- BEGIN: Interactive Carousel, Modals and Multilingual Translation Script -->
+  <!-- BEGIN: Interactive Carousel, Modals and Multilingual Translation Script -->
   <script data-purpose="multilingual-carousel-and-modals">
     // Current Year Update
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -1130,67 +1372,67 @@
         quoteBtnHeader: 'Solicitar Orçamento',
         quoteBtnHeaderShort: 'Orçamento',
         mobileLangLabel: 'Idioma:',
-        
+
         // Hero
         heroLine1: 'CONSTRUINDO QUALIDADE.',
         heroLine2: 'CRIANDO CONFIANÇA.',
         heroQuoteBtn: 'Solicitar Orçamento',
-        
+
         // About
         aboutTag: 'Excelência em Construção',
         aboutHeading: 'Construindo com Padrão Excepcional',
         aboutDesc: 'Com anos de atuação primorosa no setor de reformas de interiores e exteriores, a <strong class="text-gold-400 font-semibold">Azevedo Construction</strong> transforma residências e espaços comerciais em ambientes de alto luxo, combinando mão de obra refinada, pontualidade e materiais nobres de altíssima durabilidade.',
-        
+
         // Services Section Header
         servicesHeading: 'Nossos Serviços',
         servicesSubheading: 'Nossos serviços combinam precisão artesanal, materiais de primeira linha e soluções sob medida para cada detalhe da sua reforma ou construção.',
         servicesBadgeText: 'Clique na foto para expandir ou no card para ver detalhes',
-        
+
         // Cards Common
         cardExpand: 'Expandir foto',
         cardCta: 'Ver fotos e detalhes',
         photoSingular: 'foto',
         photoPlural: 'fotos',
-        
+
         // Footer
         footerTagline: 'Compromisso inabalável com a excelência técnica, pontualidade e transparência em todas as obras.',
         footerContactHeading: 'Contato',
         footerAddressHeading: 'Endereço',
         footerCopyright: '© {year} Azevedo Construction & Remodeling Services. Todos os direitos reservados.',
-        
+
         // Floating WhatsApp
         waTooltipMsg: '"Olá, gostaria de solicitar um orçamento!"',
-        waBaseUrl: 'https://wa.me/5527996889345?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!',
-        waBtnTitle: 'WhatsApp: +55 (27) 99688-9345',
-        waAriaLabel: 'Conversar no WhatsApp com Azevedo Construction: +55 (27) 99688-9345',
-        
+        waBaseUrl: 'https://wa.me/18572514096?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!',
+        waBtnTitle: 'WhatsApp: +1 (857) 251-4096',
+        waAriaLabel: 'Conversar no WhatsApp com Azevedo Construction: +1 (857) 251-4096',
+
         // Service Modal
         serviceModalGalleryBadge: 'Galeria do Projeto',
         serviceModalEnlargeBadge: 'Ampliar foto',
         serviceModalQuoteBtn: 'Pedir Orçamento Deste Serviço',
         serviceModalFallbackText: 'Foto real em preparação (pasta img/)',
-        
+
         // Lightbox
         lightboxPhotoCounter: 'Foto {current} de {total}',
         lightboxDesktopNav: 'Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> para fechar • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> para navegar',
         lightboxMobileNav: 'Deslize para navegar • Toque para fechar',
-        
+
         // Quote Modal
         quoteModalTitle: 'Solicitar Orçamento',
         quoteModalSub: 'Preencha seus dados para receber uma consultoria exclusiva e um orçamento personalizado.',
         labelQuoteName: 'Nome Completo',
         placeholderQuoteName: 'Seu nome completo',
         labelQuotePhone: 'Telefone',
-        placeholderQuotePhone: '(27) 99688-9345',
+        placeholderQuotePhone: '+1 (857) 251-4096',
         labelQuoteService: 'Serviço Desejado',
         labelQuoteMessage: 'Mensagem ou Detalhes',
         placeholderQuoteMessage: 'Descreva brevemente o seu projeto...',
         quoteSubmitBtnText: 'Enviar via WhatsApp',
-        
+
         // Select Options
         selectReformaCompleta: 'Reforma Completa',
         selectOutros: 'Outros Projetos',
-        
+
         // WhatsApp messages generated dynamically
         leadMsgHeader: '*NOVO PEDIDO DE ORÇAMENTO*',
         leadMsgCompany: '*Azevedo Construction & Remodeling*',
@@ -1199,7 +1441,7 @@
         leadMsgService: '*Serviço:*',
         leadMsgMessage: '*Mensagem:*',
         leadMsgClosing: '_Olá, gostaria de solicitar o orçamento para o meu projeto!_',
-        
+
         serviceWaMsgHeader: '*SOLICITAÇÃO DE SERVIÇO*',
         serviceWaMsgInterest: '*Serviço de Interesse:*',
         serviceWaMsgClosing: '_Olá! Vi o serviço de {service} no site e gostaria de solicitar um orçamento para o meu projeto._'
@@ -1215,67 +1457,67 @@
         quoteBtnHeader: 'Request a Quote',
         quoteBtnHeaderShort: 'Quote',
         mobileLangLabel: 'Language:',
-        
+
         // Hero
         heroLine1: 'BUILDING QUALITY.',
         heroLine2: 'CREATING TRUST.',
         heroQuoteBtn: 'Request a Quote',
-        
+
         // About
         aboutTag: 'Excellence in Construction',
         aboutHeading: 'Building with Exceptional Standards',
         aboutDesc: 'With years of distinguished experience in interior and exterior remodeling, <strong class="text-gold-400 font-semibold">Azevedo Construction</strong> transforms residences and commercial spaces into high-end luxury environments, combining refined craftsmanship, punctuality, and noble materials of the highest durability.',
-        
+
         // Services Section Header
         servicesHeading: 'Our Services',
         servicesSubheading: 'Our services combine artisan precision, premium-grade materials, and custom solutions for every detail of your remodeling or construction project.',
         servicesBadgeText: 'Click photo to enlarge or card to view details',
-        
+
         // Cards Common
         cardExpand: 'Enlarge photo',
         cardCta: 'View photos & details',
         photoSingular: 'photo',
         photoPlural: 'photos',
-        
+
         // Footer
         footerTagline: 'Unwavering commitment to technical excellence, punctuality, and transparency in every project.',
         footerContactHeading: 'Contact',
         footerAddressHeading: 'Location',
         footerCopyright: '© {year} Azevedo Construction & Remodeling Services. All rights reserved.',
-        
+
         // Floating WhatsApp
         waTooltipMsg: '"Hello, I would like to request a quote!"',
-        waBaseUrl: 'https://wa.me/5527996889345?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote!',
-        waBtnTitle: 'WhatsApp: +55 (27) 99688-9345',
-        waAriaLabel: 'Chat on WhatsApp with Azevedo Construction: +55 (27) 99688-9345',
-        
+        waBaseUrl: 'https://wa.me/18572514096?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote!',
+        waBtnTitle: 'WhatsApp: +1 (857) 251-4096',
+        waAriaLabel: 'Chat on WhatsApp with Azevedo Construction: +1 (857) 251-4096',
+
         // Service Modal
         serviceModalGalleryBadge: 'Project Gallery',
         serviceModalEnlargeBadge: 'Enlarge photo',
         serviceModalQuoteBtn: 'Request a Quote for this Service',
         serviceModalFallbackText: 'Real photo in preparation (img/ folder)',
-        
+
         // Lightbox
         lightboxPhotoCounter: 'Photo {current} of {total}',
         lightboxDesktopNav: 'Use <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">ESC</kbd> to close • <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-dark-900 text-gold-400 font-mono text-[10px] border border-gold-500/30">→</kbd> to navigate',
         lightboxMobileNav: 'Swipe to navigate • Tap to close',
-        
+
         // Quote Modal
         quoteModalTitle: 'Request a Quote',
         quoteModalSub: 'Fill in your details to receive an exclusive consultation and a customized quote.',
         labelQuoteName: 'Full Name',
         placeholderQuoteName: 'Your full name',
         labelQuotePhone: 'Phone Number',
-        placeholderQuotePhone: '+1 (555) 000-0000',
+        placeholderQuotePhone: '+1 (857) 251-4096',
         labelQuoteService: 'Desired Service',
         labelQuoteMessage: 'Message or Details',
         placeholderQuoteMessage: 'Briefly describe your project...',
         quoteSubmitBtnText: 'Send via WhatsApp',
-        
+
         // Select Options
         selectReformaCompleta: 'Full Remodeling',
         selectOutros: 'Other Projects',
-        
+
         // WhatsApp messages generated dynamically
         leadMsgHeader: '*NEW QUOTE REQUEST*',
         leadMsgCompany: '*Azevedo Construction & Remodeling*',
@@ -1284,7 +1526,7 @@
         leadMsgService: '*Service:*',
         leadMsgMessage: '*Message:*',
         leadMsgClosing: '_Hello, I would like to request a quote for my project!_',
-        
+
         serviceWaMsgHeader: '*SERVICE REQUEST*',
         serviceWaMsgInterest: '*Service of Interest:*',
         serviceWaMsgClosing: '_Hello! I saw the {service} service on your website and would like to request a quote for my project._'
@@ -1526,10 +1768,12 @@
       const mobileNavAbout = document.getElementById('mobileNavLinkSobre');
       const mobileNavServices = document.getElementById('mobileNavLinkServicos');
       const mobileNavContact = document.getElementById('mobileNavLinkContato');
+      const mobileDrawerQuoteText = document.getElementById('mobileDrawerQuoteText');
       if (mobileLangLabel) mobileLangLabel.textContent = t.mobileLangLabel;
       if (mobileNavAbout) mobileNavAbout.textContent = t.navAbout;
       if (mobileNavServices) mobileNavServices.textContent = t.navServices;
       if (mobileNavContact) mobileNavContact.textContent = t.navContact;
+      if (mobileDrawerQuoteText) mobileDrawerQuoteText.textContent = t.quoteBtnHeader;
 
       // Hero Section
       const heroLine1 = document.getElementById('heroLine1');
@@ -1629,7 +1873,7 @@ ${t.leadMsgCompany}
 ${t.serviceWaMsgInterest} ${sTitle}
 ----------------------------------------
 ${t.serviceWaMsgClosing.replace('{service}', sTitle)}`;
-          sWaBtn.href = `https://wa.me/5527996889345?text=${encodeURIComponent(waMsg)}`;
+          sWaBtn.href = `https://wa.me/18572514096?text=${encodeURIComponent(waMsg)}`;
         }
       }
 
@@ -1899,6 +2143,10 @@ ${t.serviceWaMsgClosing.replace('{service}', sTitle)}`;
 
     openModalBtn?.addEventListener('click', openModal);
     headerQuoteBtn?.addEventListener('click', openModal);
+    document.getElementById('mobileDrawerQuoteBtn')?.addEventListener('click', () => {
+      closeMobileMenu();
+      openModal();
+    });
     closeModalBtn?.addEventListener('click', closeModal);
 
     quoteModal?.addEventListener('click', (e) => {
@@ -1936,7 +2184,7 @@ ${t.serviceWaMsgClosing.replace('{service}', sTitle)}`;
 `;
       msg += `${t.leadMsgClosing}`;
 
-      const whatsappUrl = `https://wa.me/5527996889345?text=${encodeURIComponent(msg)}`;
+      const whatsappUrl = `https://wa.me/18572514096?text=${encodeURIComponent(msg)}`;
       window.open(whatsappUrl, '_blank');
 
       closeModal();
@@ -2054,7 +2302,7 @@ ${t.leadMsgCompany}
 ${t.serviceWaMsgInterest} ${serviceTitle}
 ----------------------------------------
 ${t.serviceWaMsgClosing.replace('{service}', serviceTitle)}`;
-      if (waBtn) waBtn.href = `https://wa.me/5527996889345?text=${encodeURIComponent(waMsg)}`;
+      if (waBtn) waBtn.href = `https://wa.me/18572514096?text=${encodeURIComponent(waMsg)}`;
 
       // Show modal
       serviceDetailModal?.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
